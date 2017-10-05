@@ -1,0 +1,6 @@
+//- Breadcrumb
+mixin breadcrumb(items)
+  .m_breadcrumb
+    ul
+      each value in items
+        li: a(href="#")= value

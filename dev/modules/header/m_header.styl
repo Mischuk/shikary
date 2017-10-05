@@ -1,0 +1,264 @@
+.m_header
+  background $black
+  position fixed
+  left 0
+  top 0
+  width 100%
+  height 60px
+  z-index 1000
+  @media screen and (min-width: 992px) and (min-height: 900px)
+    height 174px
+  .top
+    display none
+    @media screen and (min-width: 992px) and (min-height: 900px)
+      display block
+      text-align right
+      line-height 80px
+  .bottom
+    height 100%
+  .top,
+  .bottom
+    @media screen and (min-width: 992px) and (min-height: 900px)
+      position relative
+      height 87px
+  .logo
+    line-height 50px
+    height 100%
+    position relative
+    z-index 1
+    background $black
+    @media screen and (min-width: 992px) and (min-height: 900px)
+      float left
+      line-height 77px
+    a
+      display inline-block
+      vertical-align top
+      img
+        display inline-block
+        vertical-align middle
+        max-width 100%
+        height 32px
+        @media MD
+          height 58px
+  .btn-mobile-menu
+    position absolute
+    right 15px
+    top 0
+    z-index 2
+    display block
+    height 60px
+    width 60px
+    cursor pointer
+    background $black
+    border none
+    @media screen and (min-width: 992px) and (min-height: 900px)
+      display none
+    &:after,
+    &:before,
+    i
+      anim()
+      content ''
+      position absolute
+      left 50%
+      width 20px
+      margin-left -10px
+      height 3px
+      background #fff
+      border-radius $radius
+    &:before
+      top 19px
+    &:after
+      bottom 19px
+    i
+      top 50%
+      margin-top -1px
+    &.is-open
+      i
+        opacity 0
+        transform translateX(-5px)
+      &:after
+        transform rotate(135deg) translate(-7px, 6px)
+      &:before
+        transform rotate(-135deg) translate(-7px, -6px)
+
+  .contacts
+    display none
+    @media screen and (min-width: 992px) and (min-height: 900px)
+      display table
+      height 100%
+      float right
+      text-align right
+      position relative
+      z-index 1
+    .tel,
+    .locate
+      text-align right
+      a
+        color #fff
+        font-size 24px
+        line-height 1
+    .locate
+      a
+        font-size 16px
+        text-decoration underline
+        &:hover
+          color $pink
+  .menu
+    position absolute
+    left 0
+    top 100%
+    width 100%
+    background $black
+    transform translateY(-100%)
+    anim()
+    overflow hidden
+    @media screen and (min-width: 992px) and (min-height: 900px)
+      transform translateY(0%)
+      top 0
+      padding 0 180px 0 280px
+      background none
+    &.is-open
+      transform translateY(0%)
+    ul
+      @media screen and (min-width: 992px) and (min-height: 900px)
+        display table
+        width 100%
+        text-align center
+        margin-top 5px
+    li
+      @media screen and (min-width: 992px) and (min-height: 900px)
+        display table-cell
+        vertical-align top
+    a
+      pribambas()
+      position relative
+      color #fff
+      display block
+      width 100%
+      padding 15px 30px
+      font-size 20px
+      @media screen and (max-height: 420px)
+        padding 10px 30px
+      @media screen and (max-height: 320px)
+        font-size 18px
+      @media screen and (max-height: 300px)
+        padding p5x 30px
+      @media screen and (min-width: 992px) and (min-height: 900px)
+        padding-left 5px
+        padding-right 5px
+        overflow hidden
+      @media screen and (min-width: 1200px) and (min-height: 900px)
+        font-size 24px
+        padding-left 10px
+        padding-right 10px
+      &:hover
+        @media screen and (min-width: 992px) and (min-height: 900px)
+          transition-duration .6s
+          color $pink
+        &:after,
+        &:before
+          transform translateX(0)
+      &:after
+        transition transform 600ms cubic-bezier(0.68, -0.55, 0.265, 0.68)
+        content ''
+        position absolute
+        left 0
+        top 0
+        width 100%
+        height 100%
+        background $pink
+        transform translateX(-100%)
+        @media screen and (min-width: 992px) and (min-height: 900px)
+          height 2px
+          transform translateX(-100%)
+      &:before
+        @media screen and (min-width: 992px) and (min-height: 900px)
+          transition transform 600ms cubic-bezier(0.68, -0.55, 0.265, 0.68)
+          content ''
+          position absolute
+          left 0
+          bottom 0
+          height 2px
+          width 100%
+          background $pink
+          transform translateX(100%)
+      span
+        position relative
+        z-index 1
+  .cart
+    display inline-block
+    vertical-align middle
+    margin-right 30px
+    a
+      color #fff
+      font-size 26px
+      line-height 0.8
+      display inline-block
+      vertical-align middle
+      position relative
+      padding-left 35px
+      background url("../images/cart.svg") no-repeat 0px 0px
+      background-size contain
+      &:hover
+        color $pink
+      span
+        anim()
+        display inline-block
+        vertical-align top
+        margin-top -2px
+  .socials
+    display inline-block
+    vertical-align middle
+    cursor default
+    padding-right 15px
+    a
+      anim()
+      display inline-block
+      vertical-align middle
+      width 25px
+      height 25px
+      margin-left 2px
+      margin-right 2px
+      &.vk
+        background url("../images/share-vk.svg") no-repeat 0 0
+        background-size contain
+        &:hover
+          background-image url("../images/share-vk-h.svg")
+      &.fb
+        background url("../images/share-fb.svg") no-repeat 0 0
+        background-size contain
+        &:hover
+          background-image url("../images/share-fb-h.svg")
+      &.instagram
+        background url("../images/share-instagram.svg") no-repeat 0 0
+        background-size contain
+        &:hover
+          background-image url("../images/share-instagram-h.svg")
+  .action
+    display inline-block
+    vertical-align middle
+    a
+      color $pink
+      font-size 24px
+      line-height 1
+      transition all 0.5s
+      border 3px solid #fff
+      box-shadow 0 0 10px 2px rgba(255,255,255,.75), inset 0 0 10px 2px rgba(255,255,255,.75)
+      display inline-block
+      vertical-align middle
+      padding-top 8px
+      padding-bottom 8px
+      padding-left 15px
+      padding-right 15px
+      border-radius $radius
+      &:hover
+        border-color $pink
+        box-shadow 0 0 10px 2px $pink, inset 0 0 10px 2px $pink
+        color $pink
+        animation neon 1s ease-in-out infinite alternate .3s
+        span
+          color $pink
+      span
+        color $green
+        transition all 0.5s
+

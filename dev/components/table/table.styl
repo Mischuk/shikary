@@ -1,0 +1,33 @@
+.responsive-table
+  @media screen and (max-width: 768px)
+    overflow auto
+    table
+      width 700px
+      min-width 100%
+table
+  width 100%
+  text-align center
+  th, td
+    padding 15px
+    box-shadow 0 0 0 1px #e0e0e0 - 5%
+  th
+    background #e0e0e0
+    cursor default
+    &:first-child
+      border-radius $radius 0 0 0
+    &:last-child
+      border-radius 0 $radius 0 0
+
+  td
+    anim()
+    background #e0e0e0 + 50%
+  tr
+    &:last-child
+      td:first-child
+        border-radius 0 0 0 $radius
+      td:last-child
+        border-radius 0 0 $radius 0
+    &:hover
+      td
+        background #e0e0e0 + 35%
+

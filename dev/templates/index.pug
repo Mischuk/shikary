@@ -1,0 +1,71 @@
+- var project = "Project"
+
+-
+  var list = [
+    { title: 'Главная', url: 'home.html' }
+  ]
+
+doctype html
+html(lang="ru")
+head
+  title= project
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  meta(name="viewport" content="width=device-width, initial-scale=1")
+  meta(name="msapplication-tap-highlight" content="no")
+  link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel="stylesheet" type="text/css")
+  style.
+    body {height: 100%; font-family: 'Roboto', sans-serif;font-size:  18px;margin: 0;background: #fcfcfc;}
+    h1{font-family: 'Roboto', cursive;background:#424242;padding: 20px 20px; color: #fff; margin: 0; margin-bottom: 10px; box-shadow: 0 0 5px rgba(0,0,0,.5); padding-right: 120px; cursor: default; }
+    ul {margin: 0;padding-left: 0;margin-left:  20px;overflow:  hidden;}
+    li {list-style:  none;}
+    a {
+      color: #424242;
+      text-decoration: none;
+      display: inline-block;
+      padding: 5px 0;
+    }
+    a:hover {
+      color: #2196f3;
+      text-decoration: underline;
+    }
+    a:active {
+      color: #ee6e73;
+    }
+    .board{
+      transition: all .25s ease-in;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 15px;
+      cursor: default;
+    }
+    .board a:hover{
+      opacity: .9;
+    }
+    @media screen and (max-width: 768px) {
+      h1{
+        padding: 15px 10px;
+        font-size: 20px;
+        margin-bottom: 0;
+        border-bottom: none;
+        padding-right: 100px;
+      }
+      ul{
+        margin-left: 10px;
+        margin-top: 10px;
+      }
+      a{
+        font-size: 16px;
+      }
+      .board{padding: 5px;}
+    }
+body
+  h1= project
+  .board
+    a(href="ui.html" target="_blank" title="View UI"): img(src="images/view.svg" alt="")
+    a(href="http://github.com/Mischuk" target="_blank" title="Project on Github"): img(src="images/download.svg" alt="")
+  ul
+    each value in list
+      li
+         a(target="_blank" href= value.url) #{value.title}

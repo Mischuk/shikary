@@ -1,0 +1,305 @@
+.m_gift
+  background url("../images/bg-result.png") no-repeat center bottom
+  background-size cover
+  min-height 100%
+  height auto
+  padding-bottom 30px
+  display none
+  .wrapper
+    display table
+    width 100%
+  .images
+    display none
+  .gift-steps
+    position relative
+  .choose-dish
+    anim()
+    @media SM
+      margin-bottom 30px
+    &.disabled
+      opacity .3
+      cursor default
+      sn()
+      .list
+        .item
+          cursor default
+          &:hover
+            .frame
+              background none
+        .item.is-current.disabled .frame
+          background $black !important
+    > .title
+      color #fff
+      font-size 16px
+      padding 15px 0
+      @media SM
+        font-size 24px
+      @media MD
+        font-size 30px
+    .list
+      clearfix()
+      margin-top 15px
+      .item
+        float left
+        width 33.333%
+        cursor pointer
+        sn()
+        &:hover,
+        &.is-current
+          .frame
+            background $black
+        .frame
+          anim()
+          padding-left 10px
+          padding-right 10px
+          @media SM
+            position relative
+            padding-left 125px
+          @media LG
+            padding-left 190px
+        .image
+          position relative
+          top -15px
+          margin-bottom -15px
+          height 80px
+          line-height 80px
+          @media SM
+            position absolute
+            left 10px
+            top 50%
+            height 100px
+            margin-top -50px
+          @media LG
+            height 150px
+            margin-top -75px
+            left 20px
+          img
+            display inline-block
+            vertical-align middle
+            max-width 100%
+            max-height 100%
+        .title
+          color $pink
+          line-height 1
+          font-size 14px
+          height 60px
+          display table
+          width 100%
+          text-align center
+          @media SM
+            font-size 21px
+            text-align left
+            height 80px
+          @media LG
+            font-size 30px
+            height 120px
+          span
+            display table-cell
+            vertical-align middle
+  .submit-dish
+    color #fff
+    padding-top 15px
+    display none
+    anim()
+    max-width 600px
+    margin-left auto
+    margin-right auto
+    &.disabled
+      opacity .3
+      cursor default
+      sn()
+      .action
+        a
+          background $green
+          color $black
+          cursor default
+    &.is-active
+      display block
+    .desc
+      font-size 14px
+      line-height 18px
+      margin-bottom 15px
+      @media SM
+        font-size 24px
+        line-height 26px
+      @media LG
+        font-size 30px
+        line-height 32px
+      > div
+        display none
+        &.active
+          display block
+    .action
+      a
+        display inline-block
+        vertical-align middle
+        color $green
+        font-size 16px
+        line-height 1
+        border 2px solid $green
+        padding 5px 10px
+        border-radius $radius
+        @media SM
+          font-size 24px
+        @media MD
+          font-size 30px
+        &:hover
+          background $green
+          color $black
+  .final-dish
+    padding-top 20px
+    display none
+    @media SM
+      max-width 740px
+      padding-top 40px
+      margin-left auto
+      margin-right auto
+    &.is-active
+      display block
+    .form
+      .form-col
+        @media SM
+          display inline-block
+          vertical-align top
+          max-width 32%
+        @media LG
+          max-width 36%
+      .title
+        color $pink
+        font-size 30px
+        line-height 1
+        padding-bottom 15px
+        @media SM
+          padding-bottom 0
+          text-align right
+          font-size 40px
+          padding-right 15px
+        @media LG
+          font-size 50px
+          line-height 0.8
+        span
+          color $green
+      .qr
+        width 75px
+        height 75px
+        background #fff
+        margin-left auto
+        margin-right auto
+        text-align center
+        line-height 75px
+        margin-bottom 15px
+        @media SM
+          width 150px
+          height 150px
+          line-height 150px
+        img
+          display inline-block
+          vertical-align middle
+          width 100%
+          height 100%
+      form
+        margin-bottom 15px
+        @media SM
+          text-align left
+          padding-left 15px
+        .label
+          color #fff
+          font-family 'Arial', 'Pribambas-Regular', sans-serif
+          font-size 14px
+          line-height 16px
+          margin-bottom 10px
+        input,
+        button
+          anim()
+          display inline-block
+          vertical-align middle
+          height 30px
+          padding 0 10px
+        input
+          color #fff
+          width 185px
+          font-size 16px
+          background $black
+          border 2px solid $black
+          cursor pointer
+          margin-right 5px
+          @media SM
+            width 100%
+            margin-bottom 10px
+            height 35px
+          &:focus
+            border-color #fff
+        button
+          pribambas()
+          border 2px solid #fff
+          border-radius $radius
+          background none
+          color #fff
+          @media SM
+            font-size 21px
+            height auto
+            padding 5px 10px
+          &:hover
+            background #fff
+            color $black
+    .instruction
+      color #fff
+      font-size 14px
+      line-height 16px
+      padding-bottom 30px
+      @media SM
+        max-width 540px
+        margin-left auto
+        margin-right auto
+        font-size 24px
+        line-height 28px
+      @media MD
+        font-size 30px
+        line-height 34px
+    .retry
+      padding-left 15px
+      a
+        anim()
+        color #fff
+        font-size 16px
+        line-height 24px
+        @media SM
+          font-size 24px
+          line-height 30px
+        &:hover
+          color $green
+          .icon
+            img
+              opacity 0
+              & + img
+                opacity 1
+        span,
+        .icon
+          display inline-block
+          vertical-align middle
+        .icon
+          position relative
+          width 24px
+          height 24px
+          @media SM
+            width 30px
+            height 30px
+          img
+            anim()
+            display block
+            width 100%
+            height 100%
+            & + img
+              position absolute
+              left 0
+              top 0
+              width 100%
+              height 100%
+              opacity 0
+    .remark
+      color #58595b
+      font-size 12px
+      line-height 14px
+      padding-top 30px
+      p
+        margin 0

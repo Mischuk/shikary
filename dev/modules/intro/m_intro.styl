@@ -1,0 +1,296 @@
+.m_intro
+  // background url("../images/bg-intro.jpg") no-repeat 50%
+  background #010102
+  overflow hidden
+  position relative
+  top 0
+  bottom 0
+  background-size cover
+  // display none
+  h1
+    color $pink
+    font-size 78px
+    line-height 1
+    @media XS
+      font-size 96px
+    @media SM
+      font-size 120px
+    @media MD
+      font-size 140px
+      line-height 0.8
+    @media LG
+      font-size 185px
+    @media screen and (min-width: 1200px) and (max-height: 600px)
+      font-size 140px
+    span
+      display block
+      color $green
+      @media screen and (max-height: 420px)
+        display inline
+  .action
+    margin-top 30px
+    @media XS
+      margin-top 45px
+    @media MD
+      margin-top 60px
+    @media screen and (max-height: 420px)
+      margin-top 30px
+    @keyframes neon
+      from
+        box-shadow 0 0 10px 2px $pink, inset 0 0 10px 2px $pink
+      to
+        box-shadow 0 0 15px 3px $pink, inset 0 0 15px 3px $pink
+    a
+      transition all 0.5s
+      border 3px solid #fff
+      box-shadow 0 0 10px 2px rgba(255,255,255,.75), inset 0 0 10px 2px rgba(255,255,255,.75)
+      color #fff
+      font-size 24px
+      line-height 1
+      display inline-block
+      vertical-align middle
+      padding-top 8px
+      padding-bottom 8px
+      padding-left 15px
+      padding-right 15px
+      border-radius $radius
+      position relative
+      z-index 2
+      @media XS
+        font-size 32px
+      @media SM
+        padding-left 30px
+        padding-right 30px
+      &:hover
+        border-color $pink
+        box-shadow 0 0 10px 2px $pink, inset 0 0 10px 2px $pink
+        color $pink
+        animation neon 1s ease-in-out infinite alternate .3s
+  .images
+    position absolute
+    left 0
+    top 0
+    width 100%
+    height 100%
+    @media LG
+      width 1200px
+      left 50%
+      margin-left -600px
+    img
+      position absolute
+      display none
+    // звезда
+    .intro-1
+      display block
+      left 10px
+      width 50px
+      top 80px
+      @media SM
+        width 116px
+      @media MD
+        top 160px
+        left -20px
+    // салат
+    .intro-2
+      display block
+      width 150px
+      top 20px
+      left 40px
+      @media SM
+        width 322px
+        left 50%
+        margin-left -250px
+        top -40px
+      @media MD
+        top 40px
+    // перец
+    .intro-3
+      display block
+      top 50%
+      width 70px
+      margin-top -10px
+      left 20px
+      @media SM
+        width 188px
+        margin-top -35px
+        left 40px
+    // креведка
+    .intro-4
+      display block
+      width 200px
+      right -60px
+      top 50%
+      @media SM
+        width 372px
+        top 150px
+      @media MD
+        top 230px
+    // лимон
+    .intro-5
+      display block
+      right 0
+      bottom 0
+      z-index 1
+      @media SM
+        width 106px
+        top 50%
+        right 50px
+      @media MD
+        right 18%
+        margin-top 120px
+    // корень
+    .intro-6
+      display block
+      bottom -60px
+      left 50%
+      width 150px
+      margin-left -40px
+      z-index 1
+      @media SM
+        width 199px
+        left auto
+        right 180px
+    // грибы
+    .intro-7
+      display block
+      left -30px
+      bottom -50px
+      @media SM
+        width 141px
+        left 30px
+        bottom 30px
+    // fish
+    .intro-8
+      display block
+      left -60px
+      bottom 60px
+      @media SM
+        width 196px
+        left 50px
+        bottom 150px
+    // петркушка
+    .intro-9
+      display block
+      left 10px
+      bottom 0
+      width 80px
+      @media SM
+        width 144px
+        left 50%
+        margin-left -200px
+        bottom -50px
+    // грибы много
+    .intro-10
+      display none
+      bottom 0
+      left 50%
+      width 70px
+      @media SM
+        width 192px
+        display block
+        left 50%
+        margin-left -250px
+        bottom -100px
+    // ягоды
+    .intro-11
+      display block
+      width 150px
+      bottom -20px
+      right -40px
+      @media SM
+        width 336px
+    // рябь
+    .intro-12
+      display block
+      right 0
+      top 50px
+      width 150px
+      @media SM
+        width 229px
+      @media MD
+        top 125px
+    // чашка
+    .intro-13
+      display block
+      width 80px
+      top 50%
+      @media SM
+        width 170px
+    // дымок чашка
+    .intro-14
+      display block
+      width 78px
+      top 50%
+      margin-top -75px
+      left 30px
+      @media SM
+        width 168px
+        margin-top -170px
+        left 65px
+    // палочки
+    .intro-15
+      display block
+      width 200px
+      right 0
+      top 0
+      @media SM
+        width 470px
+      @media MD
+        top -75px
+    // свечение 1
+    .intro-16
+      display block
+      left -150px
+      top 50%
+      margin-top -150px
+      width 350px
+      @media SM
+        left -223px
+        margin-top -181px
+        width 576px
+    // свечение 1
+    .intro-17
+      display block
+      right -75px
+      top 40px
+      width 500px
+      @media SM
+        width 710px
+        right -90px
+        top 35px
+      @media MD
+        top 50px
+.first-test-blank
+  position absolute
+  left 0
+  top 0
+  width 100%
+  height 100%
+  z-index -1
+  &:after
+    content ''
+    position absolute
+    left 0
+    top 0
+    width 50%
+    height 100%
+    background #FF493B
+  &:before
+    content ''
+    position absolute
+    right 0
+    top 0
+    width 50%
+    height 100%
+    background #0E46C1
+  .bottom
+    @media LG
+      position absolute
+      left 0
+      bottom 0
+      width 100%
+      height 50px
+      background url("../images/bottom-line.jpg") repeat 0 0
+      z-index 3
+    @media screen and (max-height: 800px)
+      display none !important

@@ -1,0 +1,29 @@
+clearfix()
+  &:before
+  &:after
+    content ''
+    display table
+    clear both
+
+anim()
+  transition all .3s ease-in
+
+
+sprite($image)
+  background url('"../images/sprite/'+$image+'.png"')
+  @media  only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi)
+    background url('"../images/sprite/'+$image+'@2x.png"')
+
+sn()
+  -webkit-touch-callout none
+  -khtml-user-select none
+  user-select none
+
+
+
+tsh($color)
+  transition all .6s ease-in
+  text-shadow 1px 1px 2px rgba(0,0,0,.3),0 0 10px $color, 0 0 15px $color, 0 0 20px $color
+  &.hovered
+    transition all .6s ease-out
+    text-shadow 1px 1px 2px rgba(0,0,0,.3), 0 0 1px $color, 0 0 25px $color, 0 0 30px $color, 0 0 35px $color, 1px 1px 5px $color, -1px -1px 5px $color, 0 0 55px $color

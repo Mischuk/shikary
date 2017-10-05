@@ -1,0 +1,45 @@
+.expansion-panel
+  li
+    &:first-child
+      .ep-header
+        border-radius $radius $radius 0 0
+    &:last-child
+      .ep-header
+        border-radius 0 0 $radius $radius
+        &.is-open
+          border-radius 0
+      .ep-body
+        border-radius 0 0 $radius $radius
+    .ep-header
+      anim()
+      sn()
+      background #333
+      color #fff
+      padding 15px 30px
+      cursor pointer
+      position relative
+      &:after
+        content ''
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 5px 0 5px;
+        border-color: #fff transparent transparent transparent;
+        position absolute
+        right 25px
+        top 50%
+        margin-top -2.5px
+      &:hover
+        background #333 + 5%
+      &.is-open
+        background #333 + 5%
+        &:after
+          border-color: transparent transparent #fff transparent;
+          border-width: 0 5px 5px 5px;
+    .ep-body
+      display none
+      background #999
+      padding 15px 30px
+      p
+        &:last-child
+          margin-bottom 0

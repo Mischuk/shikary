@@ -1,0 +1,1721 @@
+.m_test
+  position relative
+  display none
+  .steps
+    position relative
+    height 100%
+    width 100%
+    min-height 100%
+    &.is-open-result
+      .step-test
+        padding-top 0
+        @media LG
+          padding-bottom 50px
+    .step-counter
+      position absolute
+      left 0
+      top 30px
+      width 100%
+      text-align center
+      font-size 36px
+      z-index 50
+      color #fff
+      text-shadow: 1px 1px 2px rgba(0,0,0,.3);
+      sn()
+      @media screen and (max-height: 490px)
+        top 0
+      @media SM
+        font-size 48px
+      @media LG
+        font-size 60px
+      @media screen and (min-width: 992px) and (max-height: 800px) and (max-width: 1199px)
+        font-size 48px
+        top 0
+      @media screen and (min-width: 768px) and (max-height: 560px) and (max-width: 1199px)
+        top 0
+      @media screen and (min-width: 1200px) and (max-height: 700px)
+        top 0
+      @media screen and (min-width: 1200px) and (max-height: 530px)
+        font-size 40px
+      i
+        font-style normal
+    .step-test
+      position relative
+      height 100%
+      padding-top 40px
+      overflow hidden
+      display none
+      @media screen and (max-height: 430px)
+        min-height 380px
+      @media screen and (min-width: 768px) and (max-height: 500px) and (max-width: 991px)
+        padding-top 70px
+      &.is-current
+        display block
+      &.anim-out
+        position absolute
+        left 0
+        top 0
+        width 100%
+        height 100%
+        z-index 100
+      &.background-anim-out
+        .backgrounds > div
+          anim()
+      .action
+        position absolute
+        left 0
+        top 0
+        width 100%
+        height 100%
+        z-index 50
+        a
+          float left
+          width 50%
+          height 100%
+      .images
+        position absolute
+        left 0
+        top 0
+        width 100%
+        height 100%
+        // z-index 100
+        @media LG
+          max-width 1200px
+          left 50%
+          margin-left -600px
+        &.right-answer
+          opacity 0
+          z-index 3
+        .parallax
+          height 100%
+          width 100%
+          .left,
+          .right
+            position relative
+            height 100%
+            width 50%
+            float left
+          .left
+            z-index 2
+          .answer-images
+            z-index 1
+            position relative
+            height 100%
+            width 100%
+          img
+            display none
+            position absolute
+          .t1
+            display block
+            width 140px
+            top 50%
+            left 0
+            margin-top -30px
+            margin-left -30px
+            @media screen and (min-width: 568px)
+              width 200px
+              margin-top -90px
+              margin-left -60px
+            @media SM
+              width 371px
+              margin-top -60px
+              margin-left -120px
+            @media LG
+              left 50%
+              margin-left -280px
+          .t2
+            display block
+            left -50px
+            bottom 0
+            width 170px
+            @media SM
+              width 269px
+          .t3
+            display block
+            top -30px
+            left 0
+            width 200px
+            @media SM
+              width 318px
+          .t4
+            display block
+            width 50px
+            right 20%
+            top 100px
+            @media SM
+              top 40px
+              right 5%
+              width 101px
+            @media LG
+              right 10%
+          .t17
+            display block
+            height 300px
+            right -40px
+            bottom -40px
+            @media SM
+              width 545px
+              height auto
+            @media LG
+              bottom 30px
+          .t5
+            display block
+            left 0
+            bottom 0
+          .t6
+            display block
+            top -40px
+          .t7
+            display none
+          .t8
+            display block
+            height 130%
+            bottom -30px
+            right -100px
+            @media screen and (max-height: 380px)
+              right -50px
+            @media SM
+              height 105%
+              right -120px
+              bottom -5px
+            @media MD
+              right -100px
+            @media LG
+              right -250px
+            @media screen and (min-width: 1700px)
+              right 50%
+              margin-right -85%
+          .t9
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              width 43px
+              left 10%
+              top 50%
+              margin-top -300px
+          .t10
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              width 73px
+              left 10%
+              top 50%
+              margin-top -250px
+              margin-left 30px
+          .t11
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              width 100px
+              width 100px
+              top 50%
+              left 10%
+              margin-top -220px
+              margin-left 90px
+          .t12
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              bottom 25%
+              right 10%
+              width 150px
+            @media MD
+              right 2%
+          .t15
+            bottom -100px
+            left 0
+            display block
+            @media screen and (max-width: 767px)
+              display none !important
+          .t16
+            right 0
+            bottom -80px
+            @media screen and (max-width: 767px)
+              display none !important
+            @media LG
+              bottom -30px
+              right -30px
+          .r1
+            display block
+            height 100px
+            top 50%
+            margin-top 0px
+            left 10%
+            @media SM
+              width 361px
+              height auto
+              left -100px
+              margin-top -180px
+            @media LG
+              left 20px
+              margin-top -120px
+          .r2
+            @media LG
+              display block
+              left 100px
+              bottom 0
+          .r3
+            display block
+            right 10px
+            bottom -15px
+            width 120px
+            @media SM
+              width 302px
+              bottom -40px
+            @media LG
+              bottom 10px
+              right 50px
+          .r4
+            display block
+            width 150px
+            right 30%
+            top -15px
+            @media SM
+              width 177px
+              right 10%
+              top -40px
+          .r5
+            display none !important
+            @media LG
+              display block !important
+              width 190px
+              left 50%
+              margin-left -190px
+              top 50px
+          .r6
+            display block
+            left -60px
+            top 0
+            width 250px
+            @media screen and (min-width: 568px)
+              left 20px
+            @media SM
+              width 540px
+              left -120px
+          .r7
+            display block
+            bottom -50px
+            right -30px
+            max-height 100%
+            height 250px
+            @media SM
+              height 540px
+              bottom -40px
+              right -50px
+            @media LG
+              right 20px
+          .r8
+            @media LG
+              display block
+              width 65px
+              right 20%
+              top 10%
+          .r9
+            @media LG
+              display block
+              width 45px
+              right 20%
+              margin-right 80px
+              top 10%
+          .r10
+            @media LG
+              display block
+              width 45px
+              right 20%
+              margin-right 70px
+              top 10%
+              margin-top 70px
+          .r11
+            display block
+            left -20%
+            bottom 0
+            width 300px
+            bottom -50px
+            @media SM
+              width 542px
+              left -50%
+              bottom -100px
+            @media MD
+              left -30%
+            @media LG
+              width 842px
+              left -50%
+              bottom -150px
+          .r12
+            width 95px
+            display none
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              left -90%
+              top 100px
+            @media LG
+              display none
+          .r13
+            display block
+            right 0
+            height 400px
+            bottom -40px
+            @media SM
+              width 442px
+              height auto
+              right auto
+              left 50%
+              margin-left -120px
+
+          .r14
+            display none
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              width 83px
+              display block
+              right 20%
+              top 10%
+              margin-top -40px
+          .r15
+            display none
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              width 83px
+              display block
+              right 20%
+              top 10%
+              margin-top 30px
+              margin-right 90px
+          .e1
+            display block
+            width 90%
+            top -40px
+            left -10px
+            @media screen and (min-width: 568px)
+              width 70%
+            @media MD
+              width 430px
+              top -120px
+              margin-left -80px
+          .e2
+            @media screen and (max-width: 1199px)
+              display none !important
+            @media LG
+              display block
+              right 120px
+              top 20%
+              width 180px
+          .e3
+            display block
+            left 10%
+            bottom 40px
+            width 50%
+            @media SM
+              width 170px
+              bottom 100px
+            @media LG
+              left 18%
+          .e4
+            display block
+            left 40%
+            bottom -20px
+            width 50%
+            @media SM
+              width 200px
+            @media LG
+              bottom 20px
+          .e5
+            display block
+            bottom -20px
+            height 300px
+            left 50%
+            margin-left -120px
+            max-height 100%
+            @media SM
+              width 400px
+              height auto
+              margin-left -180px
+            @media MD
+              width 603px
+              margin-left -250px
+            @media LG
+              bottom 20px
+          .e6
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              width 70px
+              bottom 350px
+              right 50px
+            @media MD
+              bottom 500px
+            @media LG
+              right 150px
+              bottom 550px
+          .e7
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              width 273px
+              top -30px
+          .e8
+            display block
+            width 200px
+            left -30px
+            top -20px
+            @media SM
+              width 415px
+              top 70px
+          .e9
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              width 150px
+              bottom 0
+              left 20px
+          .e10
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              width 85px
+              bottom 250px
+              left 50px
+          .e11
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              width 236px
+              top 50%
+              left 50%
+              margin-top -350px
+              margin-left 200px
+          .e12
+            display block
+            height 653px
+            bottom -200px
+            right -300px
+            @media SM
+              right -200px
+
+          .w1
+            display block
+            width 140px
+            top 5%
+            left 5%
+            @media SM
+              width 300px
+            @media MD
+              width 330px
+              top 20%
+            @media LG
+              width 427px
+              top 18%
+          .w2
+            display block
+            width 100px
+            bottom -50px
+            left 0
+            width 150px
+            @media screen and (min-width: 568px)
+              width 200px
+              left 50%
+              margin-left -100px
+              bottom -100px
+            @media SM
+              width 400px
+              margin-left -200px
+              bottom -150px
+            @media MD
+              bottom -180px
+            @media LG
+              bottom -200px
+              width 536px
+              margin-left -268px
+          .w3
+            display block
+            width 150px
+            top -40px
+            left 50%
+            margin-left -75px
+            @media SM
+              width 250px
+              top -60px
+              margin-left -125px
+            @media LG
+              width 347px
+              margin-left -173px
+              top -75px
+          .w4
+            display block
+            right 50%
+            bottom -50px
+            width 70%
+            margin-right -25%
+            z-index 1
+            @media MD
+              width 295px
+              margin-left -147px
+              bottom -100px
+            @media LG
+              bottom -50px
+          .w5
+            display block
+            width 50%
+            left 10%
+            bottom 0
+            @media MD
+              width 232px
+            @media LG
+              bottom 50px
+          .w6
+            @media screen and (max-width: 1199px)
+              display none !important
+            @media LG
+              display block
+              right 5%
+              bottom 100px
+              width 282px
+          .w8
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              width 190px
+              top 25%
+              right 5%
+            @media MD
+              top 35%
+          .w9
+            @media screen and (max-width: 991px)
+              display none !important
+            @media MD
+              display block
+              height 300px
+              right 50%
+              margin-right 0px
+            @media LG
+              height 469px
+              margin-right -100px
+              top 50px
+          .w10
+            display block
+            right -50%
+            top -50px
+            width 260px
+            margin-right -100px
+            @media SM
+              margin-right -130px
+              right 50%
+              top 100px
+            @media MD
+              margin-right -300px
+            @media LG
+              top 150px
+              margin-right -350px
+          .w11
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              right 50%
+              margin-right -250px
+              bottom -200px
+            @media LG
+              width 360px
+              margin-right -350px
+              bottom -100px
+          .w12
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              width 128px
+              top 0
+              right 50%
+              margin-right 0px
+            @media MD
+              margin-right -130px
+              top 20px
+          .q1
+            display block
+            width 120px
+            left 20px
+            bottom 30px
+            @media screen and (min-width: 568px)
+              width 120px
+            @media SM
+              width 300px
+              bottom 50px
+            @media LG
+              width 386px
+              bottom 80px
+          .q2
+            @media screen and (max-width: 567px)
+              display none !important
+            @media screen and (min-width: 568px)
+              display block
+              width 100px
+              right 40px
+              bottom -40px
+            @media SM
+              width 150px
+              right 20px
+              bottom -60px
+            @media MD
+              right 100px
+            @media LG
+              bottom -20px
+          .q3
+            display block
+            width 80px
+            left 0
+            top 50%
+            margin-top -40px
+            @media screen and (min-width: 568px)
+              top 30%
+            @media SM
+              width 149px
+              margin-top 0
+              top 50%
+            @media MD
+              top 25%
+            @media LG
+              top 32%
+          .q4
+            display block
+            width 80px
+            left 50%
+            margin-left -40px
+            top 30px
+            @media SM
+              width 220px
+              top -20px
+              margin-left -110px
+            @media MD
+              top -40px
+          .q5
+            display block
+            height 350px
+            bottom -30px
+            left 50%
+            margin-left -144px
+            max-height 100%
+            @media screen and (min-width: 568px)
+              height 260px
+              margin-left -104px
+            @media SM
+              height 556px
+              margin-left -228px
+            @media LG
+              bottom 20px
+          .q6
+            display block
+            width 50px
+            left 10%
+            top 20px
+            @media SM
+              top 7%
+          .q7
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              width 200px
+              bottom 520px
+              right 20px
+            @media MD
+              bottom 450px
+              right 8%
+            @media LG
+              right 20%
+              bottom 550px
+          .q8
+            display block
+            width 50px
+            right 3%
+            top 25%
+            @media screen and (min-width: 568px)
+              top 25%
+            @media SM
+              width 68px
+          .q9
+            bottom -200px
+            right -200px
+            max-height 100%
+            height 627px
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+            @media MD
+              right 50%
+              margin-right -400px
+          .q10
+            display block
+            width 150px
+            right -20px
+            top -30px
+            @media SM
+              right 50%
+              margin-right -50px
+            @media MD
+              margin-right 50px
+          .q11
+            display none
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              width 240px
+              top 150px
+              right 50px
+            @media MD
+              top 50px
+          .i1
+            display block
+            width 150px
+            left -30px
+            top -40px
+            @media SM
+              width 300px
+              left -50px
+              top -50px
+            @media MD
+              width 300px
+              left -75px
+              top -75px
+            @media LG
+              left -100px
+              top -100px
+              width 460px
+          .i2
+            width 120px
+            right 20px
+            top -20px
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+            @media MD
+              right 50px
+          .i3
+            width 100px
+            left 30px
+            top -5px
+            display block
+            @media SM
+              width 217px
+          .i4
+            @media screen and (max-width: 1199px)
+              display none !important
+            @media LG
+              display block
+              width 183px
+              right 180px
+              top 100px
+          .i5
+            display block
+            bottom 20%
+            left 0
+            width 150px
+            @media SM
+              width 230px
+            @media LG
+              width 296px
+          .i6
+            display block
+            bottom -50px
+            left 50%
+            width 150px
+            margin-left -75px
+            @media SM
+              width 331px
+              margin-left -165px
+              bottom -125px
+            @media LG
+              bottom -75px
+          .i7
+            bottom 150px
+            right 50px
+            width 150px
+            @media screen and (max-width: 1199px)
+              display none !important
+            @media LG
+              display block
+          .i8
+            display block
+            bottom -20px
+            right -50px
+            width auto
+            height 200px
+            @media SM
+              height 350px
+            @media LG
+              height 474px
+              right 50px
+              bottom 20px
+          .i9
+            display block
+            height 270px
+            right -30px
+            bottom -15px
+            @media SM
+              height 500px
+            @media LG
+              height 518px
+              bottom 30px
+              right 45px
+          .i10
+            @media screen and (max-width: 1199px)
+              display none !important
+            @media LG
+              display block
+              width 307px
+              bottom -50px
+              left -200px
+          .i11
+            display block
+            left 15px
+            top 85px
+            width 75px
+            @media SM
+              width 212px
+              left 50px
+            @media MD
+              left 120px
+            @media LG
+              left 300px
+          .i12
+            display block
+            width 75px
+            left -15px
+            top -15px
+            @media SM
+              left 0
+              width 138px
+            @media LG
+              left 100px
+          .u1
+            display block
+            width 150px
+            top -30px
+            @media SM
+              width 360px
+              top -50px
+              left -50px
+          .u2
+            display block
+            width 100px
+            top 50%
+            @media SM
+              width 309px
+              margin-top -150px
+              left -90px
+          .u3
+            display block
+            bottom -30px
+            right 5%
+            width 150px
+            max-width 311px
+            @media SM
+              width 311px
+              bottom -70px
+          .u4
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display block
+              width 100px
+              bottom 250px
+              left 30px
+            @media LG
+              bottom 100px
+          .u5
+            display block
+            width 90%
+            bottom -10px
+            left 5%
+          .u6
+            display block
+            width 100%
+            right 0
+            top -30px
+          // answer
+          .u7
+            display block
+            width 90%
+            bottom -10px
+            left 5%
+            @media SM
+              right -30px
+              width 80%
+              left auto
+              bottom -30px
+            @media MD
+              width 765px
+          .u8
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              width 575px
+              left -250px
+              top 50%
+              margin-top -300px
+            @media LG
+              left -50px
+            @media screen and (min-width: 1200px) and (max-height: 760px)
+              top auto
+              bottom 0
+          .u9
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              width 165px
+              bottom 5px
+              left 5px
+            @media LG
+              bottom 65px
+          .u10
+            display block
+            width 150px
+            top -20px
+            left 30px
+            @media SM
+              width 200px
+            @media MD
+              width 300px
+              top -150px
+            @media LG
+              width 545px
+              top -250px
+              left -50px
+            @media screen and (min-width: 1200px) and (max-height: 1000px)
+              width 400px
+              top -200px
+            @media screen and (min-width: 1200px) and (max-height: 760px)
+              width 350px
+          .u11
+            display block
+            width 150px
+            right -50px
+            top -50px
+            @media SM
+              width 460px
+              right -120px
+              top -100px
+          .u12
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              width 300px
+              right -50px
+              top 30%
+          .u13
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              width 111px
+              right -50px
+              top 30%
+              margin-top 150px
+          .z1
+            display block
+            width 150px
+            left 0
+            top -50px
+            @media SM
+              width 371px
+              left -100px
+              top -100px
+          .z2
+            display block
+            width 150px
+            bottom -50px
+            right 20px
+            @media SM
+              width 263px
+          .z3
+            display block
+            width 100px
+            bottom 75px
+            left 20px
+            @media SM
+              width 150px
+          .z4
+            display block
+            width 150px
+            top 15px
+            right -15px
+            @media SM
+              width 233px
+              right 0
+              left 20%
+          .z5
+            display block
+            left 0
+            bottom 0
+            height 300px
+            @media SM
+              height 469px
+          .z6
+            display none
+            @media SM
+              display block
+              width 87px
+              right 50px
+              top 50%
+              margin-top -140px
+          .z7
+            display none
+            @media SM
+              display block
+              width 170px
+              bottom 100px
+              right 30px
+          .z8
+            display none
+            @media SM
+              display block
+              width 78px
+              top 50%
+              right 100px
+              margin-top -250px
+          .z9
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              right 50px
+              top 50%
+              margin-top -200px
+              width 150px
+          .z10
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              bottom -50px
+              width 600px
+              right -255px
+          .z11
+            width 150px
+            right -20px
+            top -30px
+            @media SM
+              width 246px
+          .x1
+            display block
+            width 80px
+            top 20px
+            left 20px
+          .x2
+            display none
+            @media SM
+              display block
+              width 125px
+              left 10px
+              top 50%
+              margin-top 100px
+            @media MD
+              margin-top -50px
+              left 50px
+          .x3
+            display none
+            @media SM
+              display block
+              width 234px
+              right 30px
+              top 10%
+          .x4
+            display block
+            width 150px
+            bottom -50px
+            right 20px
+            @media SM
+              width 331px
+              bottom -150px
+          .x5
+            display block
+            width 100px
+            top -50px
+            left 50%
+            margin-left -50px
+            @media SM
+              width 141px
+              margin-left -70px
+          .x6
+            top 50%
+            width 100px
+            margin-top -50px
+            left -30px
+            display block
+            @media SM
+              width 131px
+            @media LG
+              left 30px
+          .x7
+            display block
+            width 75px
+            bottom -30px
+            left 20px
+            @media SM
+              width 114px
+            @media LG
+              bottom 20px
+          .x8
+            display none
+            @media SM
+              display block
+              width 100px
+              left 100px
+              bottom 250px
+            @media MD
+              left 50px
+              bottom 150px
+            @media LG
+              width 160px
+          .x9
+            display block
+            width 250px
+            left 50%
+            margin-left -75px
+            bottom -50px
+            @media SM
+              width 459px
+              margin-left -150px
+              bottom -150px
+            @media LG
+              bottom -100px
+              margin-left -50px
+          .x10
+            width 100px
+            left 10px
+            top 20px
+            @media SM
+              width 131px
+          .x11
+            width 100px
+            right -30px
+            top -20px
+          .x12
+            width 300px
+            bottom -30px
+            right -100px
+            @media SM
+              width 459px
+              top 50%
+              bottom auto
+              margin-top -300px
+              right -200px
+            @media LG
+              right -100px
+          .x13
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              width 228px
+              left 10px
+              bottom 30px
+            @media LG
+              bottom 100px
+          .x14
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              display none !important
+          .x15
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              width 141px
+              right 5%
+              bottom 20%
+            @media LG
+              bottom 10%
+              left 50%
+              right auto
+              margin-left 200px
+          .x16
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              width 181px
+              top 50%
+              left 5%
+              margin-top -190px
+          .b1
+            display block
+            width 100px
+            left 30px
+            top -20px
+            @media SM
+              width 253px
+              top -50px
+          .b2
+            display block
+            width 150px
+            bottom 0
+            left 5px
+            @media SM
+              width 318px
+          .b3
+            display none
+          .b4
+            display block
+            width 100px
+            left 20px
+            top 20px
+            @media SM
+              width 188px
+          .b5
+            display none
+            @media SM
+              display block
+              width 148px
+              right 10px
+              top 10%
+          .b6
+            display none
+            @media LG
+              display block
+              width 150px
+              left 10px
+              bottom 50px
+          .b7
+            display block
+            width 80px
+            top 50%
+            left 20px
+            margin-top 50px
+            @media MD
+              left 50%
+              margin-left -170px
+          .b8
+            display block
+            height 250px
+            bottom -50px
+            right -80px
+            @media SM
+              height 403px
+              bottom -100px
+            @media LG
+              bottom -40px
+          .b9
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              width 145px
+              right 30px
+              top -30px
+          .b10
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              width 145px
+              left 0
+              top 30%
+          .b11
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              width 80px
+              top 5%
+              left 5%
+          .b12
+            @media screen and (max-width: 767px)
+              display none !important
+            @media SM
+              width 188px
+              left 150px
+              top 14%
+            @media LG
+              left 300px
+              top 10%
+          .b13
+            right -30px
+            @media SM
+              right auto
+              bottom -200px
+              width 988px
+              margin-left -494px
+              left 50%
+      .backgrounds
+        width 100%
+        height 100%
+        position absolute
+        left 0
+        top 0
+        .left,
+        .right
+          width 100%
+          height 100%
+          position absolute
+          top 0
+        .left
+          left -50%
+          z-index 1
+        .right
+          right -50%
+      .bottom
+        @media LG
+          position absolute
+          left 0
+          bottom 0
+          width 100%
+          height 50px
+          background url("../images/bottom-line.jpg") repeat 0 0
+          z-index 3
+      .question
+        sn()
+        position relative
+        z-index 10
+        display table
+        height 100%
+        width 100%
+        text-align center
+        color #fff
+        .title
+          line-height 1
+          cursor default
+          text-shadow 1px 1px 2px rgba(0,0,0,0.3)
+          .ask
+            transition all .6s ease-out
+            font-size 60px
+            @media SM
+              font-size 120px
+            @media MD
+              font-size 180px
+            @media LG
+              font-size 225px
+            @media screen and (min-width: 1200px) and (max-height: 700px)
+              font-size 180px
+            @media screen and (min-width: 1200px) and (max-height: 600px)
+              font-size 120px
+          .answer
+            padding-top 15px
+            font-size 28px
+            display none
+            @media SM
+              font-size 36px
+            @media MD
+              font-size 40px
+            @media LG
+              font-size 50px
+        .correct-variant
+          display none
+        .choose-variants
+          clearfix()
+          padding-top 45px
+          font-size 23px
+          line-height 1.2
+          position relative
+          padding-bottom 80px
+          @media screen and (max-height: 490px)
+            padding-bottom 60px
+            padding-top 20px
+          @media screen and (max-height: 420px)
+            padding-bottom 50px
+          @media SM
+            font-size 46px
+            padding-bottom 120px
+          @media MD
+            font-size 52px
+          @media LG
+            font-size 80px
+          @media screen and (min-width: 1200px) and (max-height: 600px)
+            font-size 52px
+          .or
+            background url("../images/bg-or.svg") no-repeat center
+            width 150px
+            height 32px
+            background-size contain
+            position absolute
+            left 50%
+            margin-left -(@width/2)
+            bottom 0
+            @media SM
+              height 65px
+            @media LG
+              bottom auto
+              top 50%
+              margin-top -54.5px
+            @media screen and (min-width: 768px) and (max-height: 500px)
+              display none !important
+            @media screen and (min-width: 992px) and (max-height: 580px)
+              display none !important
+          > .variant
+            display inline-block
+            vertical-align middle
+            width 49%
+            padding 0 10px
+            @media screen and (min-width: 360px)
+              padding 0 30px
+            @media SM
+              padding 0 45px
+            @media LG
+              padding 0 80px
+            span
+              &.tsh-1
+                tsh(#FF6E0B)
+              &.tsh-2
+                tsh(#00D6D6)
+              &.tsh-3
+                tsh(#bb0cff)
+              &.tsh-4
+                tsh(#cbdb00)
+              &.tsh-5
+                tsh(#00D6D6)
+              &.tsh-6
+                tsh(#ff5200)
+              &.tsh-7
+                tsh(#ffcc00)
+              &.tsh-8
+                tsh(#f80cc7)
+              &.tsh-9
+                tsh(#19f2c8)
+              &.tsh-10
+                tsh(#ff50ae)
+              &.tsh-11
+                tsh(#ff9d00)
+              &.tsh-12
+                tsh(#227CFF)
+              &.tsh-13
+                tsh(#FF33C0)
+              &.tsh-14
+                tsh(#A0E300)
+              &.tsh-15
+                tsh(#FF6E0B)
+              &.tsh-16
+                tsh(#33E3FF)
+              &.tsh-17
+                tsh(#A90CFF)
+              &.tsh-18
+                tsh(#FFAB00)
+              &.tsh-19
+                tsh(#B9C900)
+              &.tsh-20
+                tsh(#FF5200)
+
+      &.is-opened
+        .images.right-answer
+          opacity 1 !important
+          transition all .6s ease-in !important
+          transition-delay 1.2s !important
+        .action
+          display none
+        //.images
+        //  // z-index 1
+        //  .parallax
+        //    img.for-result
+        //      opacity 1
+        //      transition opacity .6s ease-in 3s
+        //      transition-delay 3s
+        .backgrounds
+          .left.swipe
+            transition all 1s ease-out
+            left 0
+            transform: translate3d(0px, 0px, 0px) !important
+          .right.swipe
+            transition all 1s ease-out
+            right 0
+            z-index 3
+            transform: translate3d(0px, 0px, 0px) !important
+        .question
+          .title
+            .ask
+              font-size 40px
+              @media SM
+                font-size 60px
+              @media MD
+                font-size 70px
+              @media LG
+                font-size 90px
+          //.choose-variants
+          //  display none
+          .correct-variant
+            // display block
+            padding 15px
+            @media SM
+              margin-top 30px
+            @media screen and (min-width: 768px) and (max-height: 550px)
+              margin-top 5px
+            @media screen and (min-width: 992px) and (max-height: 590px)
+              margin-top 5px
+            @media screen and (min-width: 1200px) and (max-height: 740px)
+              margin-top 5px
+            .frame
+              background #26262A
+              padding 15px
+              max-width 540px
+              margin-left auto
+              margin-right auto
+              @media screen and (min-width: 568px) and (min-height: 470px)
+                padding 20px
+              @media SM
+                padding 30px
+              @media screen and (min-width: 768px) and (max-height: 550px)
+                padding 15px
+              @media screen and (min-width: 992px) and (max-height: 590px)
+                padding 15px 30px
+              .description
+                font-family Arial, 'Pribambas', sans-serif
+                padding-bottom 15px
+                @media SM
+                  padding 15px 0 25px 0
+                @media screen and (min-width: 768px) and (max-height: 490px)
+                  padding-top 0
+                @media screen and (min-width: 992px) and (max-height: 530px)
+                  padding-top 0
+                @media screen and (min-width: 992px) and (max-height: 470px)
+                  font-size 14px
+                @media LG
+                  padding 15px 25px 25px 25px
+                @media screen and (min-width: 1200px) and (max-height: 680px)
+                  padding-top 0
+                  padding-bottom 5px
+                .correct,
+                .wrong
+                  display none
+              .next
+                padding-bottom 5px
+                @media LG
+                  margin-top 15px
+                a
+                  transition all 0.5s
+                  border 3px solid #fff
+                  box-shadow 0 0 10px 2px rgba(255,255,255,.75), inset 0 0 10px 2px rgba(255,255,255,.75)
+                  color #fff
+                  font-size 24px
+                  line-height 1
+                  display inline-block
+                  vertical-align middle
+                  padding-top 8px
+                  padding-bottom 8px
+                  padding-left 15px
+                  padding-right 15px
+                  border-radius $radius
+                  @media XS
+                    font-size 32px
+                  @media SM
+                    padding-left 30px
+                    padding-right 30px
+                  @media screen and (min-width: 768px) and (max-height: 490px)
+                    padding 10px 20px
+                    font-size 26px
+                  @media screen and (min-width: 992px) and (max-height: 530px)
+                    padding 10px 20px
+                    font-size 26px
+                  &:hover
+                    border-color $green
+                    box-shadow 0 0 10px 2px $green, inset 0 0 10px 2px $green
+                    color $green
+              .status
+                padding-bottom 15px
+                .icon
+                  margin-left auto
+                  margin-right auto
+                  margin-bottom 5px
+                  @media screen and (min-width: 768px) and (max-height: 460px)
+                    display none
+                  @media screen and (min-width: 992px) and (max-height: 530px)
+                    display none
+                .title
+                  font-size 22px
+                  @media SM
+                    font-size 30px
+                  @media MD
+                    font-size 36px
+                  @media LG
+                    font-size 46px
+                .correct
+                  display none
+                  .title
+                    color $green
+                  .icon
+                    width 41.25px
+                    height 31.25px
+                    position relative
+                    @media LG
+                      width 132px
+                      height 100px
+                    @media screen and (min-width: 1200px) and (max-height: 768px)
+                      width 50px
+                      height 37px
+                    @media screen and (min-width: 1200px) and (max-height: 630px)
+                      display none
+                    &:before,
+                    &:after
+                      anim()
+                      content ''
+                      position absolute
+                      left 0
+                      top 0
+                      width 100%
+                      height 100%
+                      background-size 41.25px
+                      background-repeat no-repeat
+                      background-position 0 0
+                      @media LG
+                        background-size 132px
+                      @media screen and (min-width: 1200px) and (max-height: 768px)
+                        background-size 50px
+                    &:before
+                      background-image url("../images/ans-corrent.png")
+                    &:after
+                      background-image url("../images/ans-corrent-highlight.png")
+                .wrong
+                  display none
+                  .title
+                    color $pink
+                  .icon
+                    width 36px
+                    height 36px
+                    position relative
+                    @media LG
+                      width 108px
+                      height 108px
+                    @media screen and (min-width: 1200px) and (max-height: 768px)
+                      width 50px
+                      height 50px
+                    @media screen and (min-width: 1200px) and (max-height: 630px)
+                      display none
+                    &:before,
+                    &:after
+                      anim()
+                      content ''
+                      position absolute
+                      left 0
+                      top 0
+                      width 100%
+                      height 100%
+                      background-size 36px
+                      background-repeat no-repeat
+                      background-position 0 0
+                      @media LG
+                        background-size 108px
+                      @media screen and (min-width: 1200px) and (max-height: 768px)
+                        background-size 50px
+                    &:before
+                      background-image url("../images/ans-wrong.png")
+                    &:after
+                      background-image url("../images/ans-wrong-highlight.png")
+      &.is-correct
+        .correct-variant
+          .frame
+            .status,
+            .description
+              .correct
+                display block !important
+      &.is-wrong
+        .correct-variant
+          .frame
+            .status,
+            .description
+              .wrong
+                display block !important

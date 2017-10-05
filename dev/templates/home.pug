@@ -1,0 +1,770 @@
+doctype html
+html(lang="ru").no-js
+  head
+    title Ресторан паназиатской кухни «Шикари»
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no")
+    meta(name="msapplication-tap-highlight" content="no")
+    link(rel="stylesheet" href="css/vendor.css")
+    link(rel="stylesheet" href="css/app.css")
+    link(href="https://fonts.googleapis.com/css?family=Comfortaa|Noto+Sans:700&amp;subset=cyrillic" rel="stylesheet")
+    script(async src="js/modernizr.js")
+  body
+    //- Tasks
+
+        1. В тесте при показе результата ответ может не помещаться в экран.
+           Делать проверку: if контент больше экрана then ставится авто высота для шага,
+                            при клике далее убирать авто высоту.
+    include _content
+    include _mixins
+    header(class="m_header")
+      .wrapper
+        .top
+          //.cart
+          //  a(href="#"): span 0 руб
+          .socials
+            a(class="vk" href="#" target="_blank")
+            a(class="fb" href="#" target="_blank")
+            a(class="instagram" href="#" target="_blank")
+          .action
+            a(href="#") Раскуси <span>Азию</span>
+        .bottom
+          .logo: a(href="#"): img(src="images/logo.svg" alt="")
+          .btn-mobile-menu: i
+          .menu
+            nav
+              - var nav = ["Меню", "Доставка", "Почетный гость", "Акции", "Контакты", "О нас"]
+              ul
+                each value in nav
+                  li: a(href="#"): span(data-line=value)= value
+          .contacts
+            .centered
+              .tel: a(href="tel:+74957810781") +7 (495) 781-0-781
+              .locate: a(href="#") Ваш регион: <span>Москва</span>
+    main
+      section.m_intro
+        .images
+          img(data-parallaxify-range-x="-20" data-parallaxify-range-y="20" class="intro-16" src="images/intro/16.png" alt="")
+          img(data-parallaxify-range-x="-20" data-parallaxify-range-y="20" class="intro-17" src="images/intro/17.png" alt="")
+          img(data-parallaxify-range-x="20" data-parallaxify-range-y="10" class="intro-12" src="images/intro/12.png" alt="")
+          img(data-parallaxify-range-x="30" data-parallaxify-range-y="45" class="intro-1" src="images/intro/1.png" alt="")
+          img(data-parallaxify-range-x="50" data-parallaxify-range-y="20" class="intro-2" src="images/intro/2.png" alt="")
+          img(data-parallaxify-range-x="10" data-parallaxify-range-y="5" class="intro-3" src="images/intro/3.png" alt="")
+          img(data-parallaxify-range-x="-20" data-parallaxify-range-y="30" class="intro-4" src="images/intro/4.png" alt="")
+          img(data-parallaxify-range-x="-50" data-parallaxify-range-y="50" class="intro-5" src="images/intro/5.png" alt="")
+          img(data-parallaxify-range-x="5" data-parallaxify-range-y="5" class="intro-6" src="images/intro/6.png" alt="")
+          img(data-parallaxify-range-x="-30" data-parallaxify-range-y="24" class="intro-7" src="images/intro/7.png" alt="")
+          img(data-parallaxify-range-x="-70" data-parallaxify-range-y="70" class="intro-8" src="images/intro/8.png" alt="")
+          img(data-parallaxify-range-x="-10" data-parallaxify-range-y="10" class="intro-9" src="images/intro/9.png" alt="")
+          img(data-parallaxify-range-x="10" data-parallaxify-range-y="-10" class="intro-10" src="images/intro/10.png" alt="")
+          img(data-parallaxify-range-x="-2" data-parallaxify-range-y="-2" class="intro-11" src="images/intro/11.png" alt="")
+          img(data-parallaxify-range-x="20" data-parallaxify-range-y="20" class="intro-13" src="images/intro/13.png" alt="")
+          img(data-parallaxify-range-x="20" data-parallaxify-range-y="20" class="intro-14" src="images/intro/14.png" alt="")
+          img(data-parallaxify-range-x="3" data-parallaxify-range-y="20" class="intro-15" src="images/intro/15.png" alt="")
+
+        .wrapper
+          .centered
+            h1 Раскуси <span>азию!</span>
+            .action
+              a(href="#") Начать тест
+      section.first-test-blank(style="display:none"): .bottom
+      section.m_test
+        .steps
+          //- .is-open-result если сейчас показывается результат после ответа
+          .step-counter: <i id="current-step" class="current">1</i>/10
+          //- is-currect если сейчас показывается этот вопрос
+          //- is-opened если сейчас показывается результат после ответа
+          //- is-correct если ответ был верен
+          //- is-wrong если ответ был ошибочен
+          //- .step-test.is-current.is-opened.is-correct
+
+          //               //
+          //  QUESTION #1  //
+          //               //
+          .step-test.is-current
+            .backgrounds
+              div(class="left swipe" data-parallaxify-range-x="-50" style="background-color: #FF493B")
+              div(class="right" data-parallaxify-range-x="-50" style="background-color: #0E46C1")
+            .images
+              .parallax
+                .left
+                  .answer-images
+                    img(data-parallaxify-range-x="-50" data-parallaxify-range-y="50" class="i1" src="images/step-1/1.png" alt="")
+                    img(data-parallaxify-range-x="60" data-parallaxify-range-y="60" class="i2" src="images/step-1/2.png" alt="")
+                    img(data-parallaxify-range-x="20" data-parallaxify-range-y="20" class="i5" src="images/step-1/5.png" alt="")
+                    img(data-parallaxify-range-x="10" data-parallaxify-range-y="50" class="i6" src="images/step-1/6.png" alt="")
+                    img(data-parallaxify-range-x="-40" data-parallaxify-range-y="-50" class="i7" src="images/step-1/7.png" alt="")
+                .right
+                  img(data-parallaxify-range-x="50" data-parallaxify-range-y="80" class="i3" src="images/step-1/3.png" alt="")
+                  img(data-parallaxify-range-x="50" data-parallaxify-range-y="20" class="i8" src="images/step-1/8.png" alt="")
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-70" class="i4" src="images/step-1/4.png" alt="")
+                  .answer-images
+                    img(data-parallaxify-range-x="20" data-parallaxify-range-y="10" class="for-result i9" src="images/step-1/9.png" alt="")
+                    img(data-parallaxify-range-x="10" data-parallaxify-range-y="20" class="for-result i10" src="images/step-1/10.png" alt="")
+                    img(data-parallaxify-range-x="30" data-parallaxify-range-y="30" class="for-result i11" src="images/step-1/11.png" alt="")
+                    img(data-parallaxify-range-x="20" data-parallaxify-range-y="-50" class="for-result i12" src="images/step-1/12.png" alt="")
+            .question
+              .centered
+                .title
+                  .ask ФОБО
+                  .answer Вьетнамское блюдо
+                .choose-variants
+                  .variant
+                    span(id="step-1-l").tsh-1 Вьетнамское <br>блюдо
+                  .variant
+                    span(id="step-1-r").tsh-2 Боевое <br>искусство
+                  .or
+                .correct-variant
+                  .frame
+                    .status
+                      .correct
+                        .icon
+                        .title Конечно!
+                      .wrong
+                        .icon
+                        .title Ты пропустил удар, ученик!
+                    .description
+                      .correct Фо-бо - это традиционный вьетнамский суп с лапшой, куда добавляют говядину, курицу или кусочки жареной рыбы. Шеф-повар Шикари готовит его так вкусно, что никакой мастер боевых искусств не устоит.
+                      .wrong Такого боевого искусства нет! Это просто вкуснейший вьетнамский суп с лапшой. Пора пересмотреть фильмы с Брюсом Ли со включенным звуком!
+                    .next
+                      a(href="#") Далее
+            .bottom
+            .action
+              a.variant(class="step-question-variant" data-status-answer="true" data-step-variant="step-1-l" href="#")
+              a.variant(class="step-question-variant" data-status-answer="false" data-step-variant="step-1-r" href="#")
+          //               //
+          //  QUESTION #2  //
+          //               //
+          .step-test
+            .backgrounds
+              .left.swipe(data-parallaxify-range-x="-50" style="background-color: #821fe3")
+              .right(data-parallaxify-range-x="-50" style="background-color: #bdbd04")
+            .images
+              .parallax
+                .left
+                  .answer-images
+                    img(data-parallaxify-range-x="-50" data-parallaxify-range-y="50" class="q1" src="images/step-2/1.png" alt="")
+                    img(data-parallaxify-range-x="60" data-parallaxify-range-y="60" class="q2" src="images/step-2/2.png" alt="")
+                    img(data-parallaxify-range-x="10" data-parallaxify-range-y="20" class="q3" src="images/step-2/3.png" alt="")
+                    img(data-parallaxify-range-x="-20" data-parallaxify-range-y="5" class="q4" src="images/step-2/4.svg" alt="")
+                .right
+                  img(data-parallaxify-range-x="20" data-parallaxify-range-y="20" class="q5" src="images/step-2/10.png" alt="")
+                  img(data-parallaxify-range-x="30" data-parallaxify-range-y="35" class="q6" src="images/step-2/7.svg" alt="")
+                  img(data-parallaxify-range-x="50" data-parallaxify-range-y="-40" class="q7" src="images/step-2/8.svg" alt="")
+                  img(data-parallaxify-range-x="30" data-parallaxify-range-y="10" class="q8" src="images/step-2/9.svg" alt="")
+                  .answer-images
+                    img(data-parallaxify-range-x="-40" data-parallaxify-range-y="-30" class="for-result q9" src="images/step-2/0.png" alt="")
+                    img(data-parallaxify-range-x="-10" data-parallaxify-range-y="-20" class="for-result q10" src="images/step-2/5.png" alt="")
+                    img(data-parallaxify-range-x="-20" data-parallaxify-range-y="50" class="for-result q11" src="images/step-2/6.svg" alt="")
+            .question
+              .centered
+                .title
+                  .ask КУКСИ
+                  .answer Корейское блюдо
+                .choose-variants
+                  .variant
+                    span(id="step-2-l").tsh-3 Корейское <br>блюдо
+                  .variant
+                    span(id="step-2-r").tsh-4 Ругательство
+                  .or
+                .correct-variant
+                  .frame
+                    .status
+                      .correct
+                        .icon
+                        .title Да, естественно!
+                      .wrong
+                        .icon
+                        .title Тысяча чертей, нет!
+                    .description
+                      .correct Это же знаменитая «корейская окрошка»! А у тебя точно не корейский паспорт?
+                      .wrong Это же традиционное корейское блюдо! Попробуй его в Шикари, и ты забудешь все ругательства на всех языках!
+                    .next
+                      a(href="#") Далее
+            .bottom
+            .action
+              a.variant(class="step-question-variant" data-status-answer="true" data-step-variant="step-2-l" href="#")
+              a.variant(class="step-question-variant" data-status-answer="false" data-step-variant="step-2-r" href="#")
+          //               //
+          //  QUESTION #3  //
+          //               //
+          .step-test
+            .backgrounds
+              .left.swipe(data-parallaxify-range-x="-50" style="background-color: #00a4ca")
+              .right(data-parallaxify-range-x="-50" style="background-color: #ff2252")
+            .images
+              .parallax
+                .left
+                  .answer-images
+                    img(data-parallaxify-range-x="-50" data-parallaxify-range-y="10" class="w1" src="images/step-3/1.png" alt="")
+                    img(data-parallaxify-range-x="20" data-parallaxify-range-y="-30" class="w2" src="images/step-3/2.png" alt="")
+                .right
+                  img(data-parallaxify-range-x="-40" data-parallaxify-range-y="20" class="w3" src="images/step-3/3.png" alt="")
+                  img(data-parallaxify-range-x="10" data-parallaxify-range-y="30" class="w4" src="images/step-3/4.png" alt="")
+                  img(data-parallaxify-range-x="-30" data-parallaxify-range-y="40" class="w5" src="images/step-3/5.png" alt="")
+                  img(data-parallaxify-range-x="20" data-parallaxify-range-y="50" class="w6" src="images/step-3/6.png" alt="")
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="10" class="w8" src="images/step-3/8.svg" alt="")
+                  .answer-images
+                    img(data-parallaxify-range-x="15" data-parallaxify-range-y="10" class="for-result w9" src="images/step-3/10.png" alt="")
+                    img(data-parallaxify-range-x="20" data-parallaxify-range-y="20" class="for-result w10" src="images/step-3/12.png" alt="")
+                    img(data-parallaxify-range-x="30" data-parallaxify-range-y="30" class="for-result w11" src="images/step-3/13.png" alt="")
+                    img(data-parallaxify-range-x="40" data-parallaxify-range-y="-40" class="for-result w12" src="images/step-3/11.svg" alt="")
+            .question
+              .centered
+                .title
+                  .ask САТЭ
+                  .answer Индонезийсоке блюдо
+                .choose-variants
+                  .variant
+                    span(id="step-3-l").tsh-5 Индонезийское <br>блюдо
+                  .variant
+                    span(id="step-3-r").tsh-6 Валюта
+                  .or
+                .correct-variant
+                  .frame
+                    .status
+                      .correct
+                        .icon
+                        .title Правильно, братэ!
+                      .wrong
+                        .icon
+                        .title Увы, не угадал!
+                    .description
+                      .correct Так и есть! А есть - вкусно! Сатэ – блюдо индонезийской кухни: жареное мясо или овощи на деревянных шпажках. Если еще не пробовал – попробуй в Шикари.
+                      .wrong Попробуй снять в банкомате пять сатэ и он выдаст жареное мясо на шпажках
+                    .next
+                      a(href="#") Далее
+            .bottom
+            .action
+              a.variant(class="step-question-variant" data-status-answer="true" data-step-variant="step-3-l" href="#")
+              a.variant(class="step-question-variant" data-status-answer="false" data-step-variant="step-3-r" href="#")
+          //               //
+          //  QUESTION #4  //
+          //               //
+          .step-test
+            .backgrounds
+              .left(data-parallaxify-range-x="-50" style="background-color: #ff9d00")
+              .right.swipe(data-parallaxify-range-x="-50" style="background-color: #c727ca")
+            .images
+              .parallax
+                .left
+                  img(data-parallaxify-range-x="-20" data-parallaxify-range-y="30" class="e1" src="images/step-4/1.png" alt="")
+                  img(data-parallaxify-range-x="-10" data-parallaxify-range-y="10" class="e2" src="images/step-4/2.png" alt="")
+                  img(data-parallaxify-range-x="20" data-parallaxify-range-y="20" class="e3" src="images/step-4/3.png" alt="")
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-50" class="e4" src="images/step-4/4.png" alt="")
+                .right
+                  img(data-parallaxify-range-x="40" data-parallaxify-range-y="40" class="e5" src="images/step-4/5.png" alt="")
+                  img(data-parallaxify-range-x="20" data-parallaxify-range-y="-30" class="e6" src="images/step-4/6.svg" alt="")
+            .images.right-answer
+              .parallax
+                .answer-images
+                  img(data-parallaxify-range-x="-20" data-parallaxify-range-y="-25" class="e7" src="images/step-4/7.png" alt="")
+                  img(data-parallaxify-range-x="-30" data-parallaxify-range-y="-50" class="e8" src="images/step-4/8.png" alt="")
+                  img(data-parallaxify-range-x="-40" data-parallaxify-range-y="40" class="e9" src="images/step-4/9.svg" alt="")
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-30" class="e10" src="images/step-4/10.svg" alt="")
+                  img(data-parallaxify-range-x="-60" data-parallaxify-range-y="-20" class="e11" src="images/step-4/11.svg" alt="")
+                  img(data-parallaxify-range-x="-10" data-parallaxify-range-y="10" class="e12" src="images/step-4/12.png" alt="")
+
+            .question
+              .centered
+                .title
+                  .ask АНЬЕН
+                  .answer Приветствие
+                .choose-variants
+                  .variant
+                    span(id="step-4-l").tsh-7 Корейское <br>блюдо
+                  .variant
+                    span(id="step-4-r").tsh-8 Приветствие
+                  .or
+                .correct-variant
+                  .frame
+                    .status
+                      .correct
+                        .icon
+                        .title Чинчча!
+                      .wrong
+                        .icon
+                        .title Ошибочка вышла!
+                    .description
+                      .correct Аньен – это «привет» по-корейски! Будешь в Шикари, можешь говорить на входе «Аньен»!
+                      .wrong Это просто «привет» по-корейски. Запомни перевод, и когда будешь в Корее, тебе больше не будет казаться, что все предлагают друг другу еду. Заходи в Шикари – мы скажем тебе «Аньен, дорогой гость!»
+                    .next
+                      a(href="#") Далее
+            .bottom
+            .action
+              a.variant(class="step-question-variant" data-status-answer="false" data-step-variant="step-4-l" href="#")
+              a.variant(class="step-question-variant" data-status-answer="true" data-step-variant="step-4-r" href="#")
+          //               //
+          //  QUESTION #5  //
+          //               //
+          .step-test
+            .backgrounds
+              .left.swipe(data-parallaxify-range-x="-50" style="background-color: #04ab97")
+              .right(data-parallaxify-range-x="-50" style="background-color: #ff3670")
+            .images
+              .parallax
+                .left
+                  .answer-images
+                    img(data-parallaxify-range-x="50" data-parallaxify-range-y="20" class="r1" src="images/step-5/1.png" alt="")
+                    img(data-parallaxify-range-x="30" data-parallaxify-range-y="10" class="r2" src="images/step-5/2.png" alt="")
+                    img(data-parallaxify-range-x="-50" data-parallaxify-range-y="50" class="r3" src="images/step-5/3.png" alt="")
+                    img(data-parallaxify-range-x="20" data-parallaxify-range-y="-20" class="r4" src="images/step-5/4.png" alt="")
+                    //- img(data-parallaxify-range-x="50" data-parallaxify-range-y="50" class="r5" src="images/step-5/5.svg" alt="")
+                .right
+                  img(data-parallaxify-range-x="-20" data-parallaxify-range-y="-20" class="r6" src="images/step-5/6.png" alt="")
+                  img(data-parallaxify-range-x="-30" data-parallaxify-range-y="-30" class="r7" src="images/step-5/7.png" alt="")
+                  img(data-parallaxify-range-x="-40" data-parallaxify-range-y="-40" class="r8" src="images/step-5/8.svg" alt="")
+                  img(data-parallaxify-range-x="25" data-parallaxify-range-y="50" class="r9" src="images/step-5/9.svg" alt="")
+                  img(data-parallaxify-range-x="35" data-parallaxify-range-y="50" class="r10" src="images/step-5/10.svg" alt="")
+                  img(data-parallaxify-range-x="-55" data-parallaxify-range-y="55" class="r11" src="images/step-5/11.png" alt="")
+                  .answer-images
+                    img(data-parallaxify-range-x="20" data-parallaxify-range-y="20" class="r12 for-result" src="images/step-5/12.svg" alt="")
+                    img(data-parallaxify-range-x="30" data-parallaxify-range-y="30" class="r13 for-result" src="images/step-5/13.png" alt="")
+                    img(data-parallaxify-range-x="20" data-parallaxify-range-y="40" class="r14 for-result" src="images/step-5/5.svg" alt="")
+                    img(data-parallaxify-range-x="-10" data-parallaxify-range-y="20" class="r15 for-result" src="images/step-5/5.svg" alt="")
+            .question
+              .centered
+                .title
+                  .ask Лок-лак
+                  .answer Камбоджийское блюдо
+                .choose-variants
+                  .variant
+                    span(id="step-5-l").tsh-9 Камбоджийское <br>блюдо
+                  .variant
+                    span(id="step-5-r").tsh-10 Танец
+                  .or
+                .correct-variant
+                  .frame
+                    .status
+                      .correct
+                        .icon
+                        .title Тебе не подсказывают?
+                      .wrong
+                        .icon
+                        .title Неверно!
+                    .description
+                      .correct Да, действительно: лок-лак – это маринованное мясо или морепродукты с соусом из пряного зеленого перца.
+                      .wrong Хочешь узнать правильный ответ? Тогда танцуй! Ладно, не танцуй – это же маринованное мясо или морепродукты с соусом из пряного зеленого перца.
+                    .next
+                      a(href="#") Далее
+            .bottom
+            .action
+              a.variant(class="step-question-variant" data-status-answer="true" data-step-variant="step-5-l" href="#")
+              a.variant(class="step-question-variant" data-status-answer="false" data-step-variant="step-5-r" href="#")
+          //               //
+          //  QUESTION #6  //
+          //               //
+          .step-test
+            .backgrounds
+              .left(data-parallaxify-range-x="-50" style="background-color: #ff7e27")
+              .right.swipe(data-parallaxify-range-x="-50" style="background-color: #0071f7")
+            .images
+              .parallax
+                .left
+                  img(data-parallaxify-range-x="-20" data-parallaxify-range-y="50" class="t1" src="images/step-6/1.png" alt="")
+                  img(data-parallaxify-range-x="30" data-parallaxify-range-y="-30" class="t12" src="images/step-6/12.png" alt="")
+                  img(data-parallaxify-range-x="40" data-parallaxify-range-y="40" class="t14" src="images/step-6/14.png" alt="")
+                .right
+                  img(data-parallaxify-range-x="-20" data-parallaxify-range-y="50" class="t2" src="images/step-6/2.png" alt="")
+                  img(data-parallaxify-range-x="40" data-parallaxify-range-y="20" class="t3" src="images/step-6/3.png" alt="")
+                  img(data-parallaxify-range-x="-30" data-parallaxify-range-y="-50" class="t4" src="images/step-6/4.svg" alt="")
+                  img(data-parallaxify-range-x="50" data-parallaxify-range-y="10" class="t17" src="images/step-6/17.png" alt="")
+            .images.right-answer
+              .parallax
+                .answer-images
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="20" class="t5" src="images/step-6/2.png" alt="")
+                  img(data-parallaxify-range-x="10" data-parallaxify-range-y="10" class="t6" src="images/step-6/3.png" alt="")
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="30" class="t8" src="images/step-6/10.png" alt="")
+                  img(data-parallaxify-range-x="25" data-parallaxify-range-y="-20" class="t9" src="images/step-6/5.svg" alt="")
+                  img(data-parallaxify-range-x="-30" data-parallaxify-range-y="-10" class="t10" src="images/step-6/6.svg" alt="")
+                  img(data-parallaxify-range-x="-40" data-parallaxify-range-y="-20" class="t11" src="images/step-6/7.svg" alt="")
+                  img(data-parallaxify-range-x="20" data-parallaxify-range-y="-30" class="t12" src="images/step-6/11.svg" alt="")
+                  img(data-parallaxify-range-x="10" data-parallaxify-range-y="20" class="t15" src="images/step-6/15.png" alt="")
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="30" class="t16" src="images/step-6/16.png" alt="")
+            .question
+              .centered
+                .title
+                  .ask Шонмао
+                  .answer Панда
+                .choose-variants
+                  .variant
+                    span(id="step-6-l").tsh-11 Китайское <br>блюдо
+                  .variant
+                    span(id="step-6-r").tsh-12 Панда
+                  .or
+                .correct-variant
+                  .frame
+                    .status
+                      .correct
+                        .icon
+                        .title Верно!
+                      .wrong
+                        .icon
+                        .title Это вряд ли!
+                    .description
+                      .correct Так китайцы называют панду! Великолепное знание фауны и языков – и никакого кунг-фу!
+                      .wrong Панда, хоть и травоядное животное, сможет за себя постоять – если ты попытаешься её съесть, она даст отпор, несмотря на то, что у неё лапки.
+                    .next
+                      a(href="#") Далее
+            .bottom
+            .action
+              a.variant(class="step-question-variant" data-status-answer="false" data-step-variant="step-6-l" href="#")
+              a.variant(class="step-question-variant" data-status-answer="true" data-step-variant="step-6-r" href="#")
+          //               //
+          //  QUESTION #7  //
+          //               //
+          .step-test
+            .backgrounds
+              .left(data-parallaxify-range-x="-50" style="background-color: #f80cc7")
+              .swipe.right(data-parallaxify-range-x="-50" style="background-color: #8dcf00")
+            .images
+              .parallax
+                .left
+                  img(data-parallaxify-range-x="10" data-parallaxify-range-y="20" class="u1" src="images/step-7/2.png" alt="")
+                  img(data-parallaxify-range-x="20" data-parallaxify-range-y="-30" class="u2" src="images/step-7/3.png" alt="")
+                  img(data-parallaxify-range-x="30" data-parallaxify-range-y="40" class="u3" src="images/step-7/4.png" alt="")
+                  img(data-parallaxify-range-x="20" data-parallaxify-range-y="-10" class="u4" src="images/step-7/lojka.svg" alt="")
+                .right
+                  img(data-parallaxify-range-x="50" data-parallaxify-range-y="50" class="u5" src="images/step-7/1.png" alt="")
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-50" class="u6" src="images/step-7/map.svg" alt="")
+            .images.right-answer
+              .parallax
+                .answer-images
+                  img(data-parallaxify-range-x="10" data-parallaxify-range-y="-20" class="u7" src="images/step-7/1.png" alt="")
+                  img(data-parallaxify-range-x="20" data-parallaxify-range-y="-30" class="u8" src="images/step-7/5.png" alt="")
+                  img(data-parallaxify-range-x="30" data-parallaxify-range-y="30" class="u9" src="images/step-7/6.png" alt="")
+                  img(data-parallaxify-range-x="50" data-parallaxify-range-y="-10" class="u11" src="images/step-7/8.png" alt="")
+                  img(data-parallaxify-range-x="20" data-parallaxify-range-y="40" class="u10" src="images/step-7/7.png" alt="")
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-30" class="u12" src="images/step-7/label.svg" alt="")
+                  img(data-parallaxify-range-x="-30" data-parallaxify-range-y="-50" class="u13" src="images/step-7/marker.svg" alt="")
+            .question
+              .centered
+                .title
+                  .ask Дум-дум
+                  .answer Город
+                .choose-variants
+                  .variant
+                    span(id="step-7-l").tsh-13 Индийское <br>блюдо
+                  .variant
+                    span(id="step-7-r").tsh-14 Город
+                  .or
+                .correct-variant
+                  .frame
+                    .status
+                      .correct
+                        .icon
+                        .title Да!
+                      .wrong
+                        .icon
+                        .title Увы, нет!
+                    .description
+                      .correct Конечно же Дум Дум - это город в Индии. Недалеко от Калькутты. Кстати, ты сейчас не там?
+                      .wrong Но можешь, конечно, попытаться съесть целый город. Правда тебе для этого потребуется о-о-о-очень много соуса карри!
+                    .next
+                      a(href="#") Далее
+            .bottom
+            .action
+              a.variant(class="step-question-variant" data-status-answer="false" data-step-variant="step-7-l" href="#")
+              a.variant(class="step-question-variant" data-status-answer="true" data-step-variant="step-7-r" href="#")
+          //               //
+          //  QUESTION #8  //
+          //               //
+          .step-test
+            .backgrounds
+              div(class="left swipe" data-parallaxify-range-x="-50" style="background-color: #FF493B")
+              div(class="right" data-parallaxify-range-x="-50" style="background-color: #0093B9")
+            .images
+              .parallax
+                .left
+                  .answer-images
+                    img(data-parallaxify-range-x="-50" data-parallaxify-range-y="50" class="z1" src="images/step-8/1.png" alt="")
+                    img(data-parallaxify-range-x="60" data-parallaxify-range-y="60" class="z2" src="images/step-8/2.png" alt="")
+                    img(data-parallaxify-range-x="20" data-parallaxify-range-y="20" class="z3" src="images/step-8/lines.svg" alt="")
+                .right
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-70" class="z7" src="images/step-8/letter.svg" alt="")
+                  img(data-parallaxify-range-x="50" data-parallaxify-range-y="80" class="z4" src="images/step-8/3.png" alt="")
+                  img(data-parallaxify-range-x="50" data-parallaxify-range-y="20" class="z5" src="images/step-8/5.png" alt="")
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-70" class="z6" src="images/step-8/4.png" alt="")
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-70" class="z8" src="images/step-8/heart.svg" alt="")
+                  .answer-images
+                    img(data-parallaxify-range-x="20" data-parallaxify-range-y="10" class="for-result z9" src="images/step-8/broken.svg" alt="")
+                    img(data-parallaxify-range-x="10" data-parallaxify-range-y="20" class="for-result z10" src="images/step-8/6.png" alt="")
+                    img(data-parallaxify-range-x="30" data-parallaxify-range-y="30" class="for-result z11" src="images/step-8/7.png" alt="")
+            .question
+              .centered
+                .title
+                  .ask Жожоэн
+                  .answer Вьетнамское блюдо
+                .choose-variants
+                  .variant
+                    span(id="step-8-l").tsh-15 Вьетнамское <br>блюдо
+                  .variant
+                    span(id="step-8-r").tsh-16 Признание <br>в любви
+                  .or
+                .correct-variant
+                  .frame
+                    .status
+                      .correct
+                        .icon
+                        .title Мы уже тебя любим...
+                      .wrong
+                        .icon
+                        .title Ну, нет же!
+                    .description
+                      .correct ...за правильные ответы! Да, именно так: жожоэн – это фирменный вьетнамский салат со свежим шпинатом, огурцами, хрустящей крошкой из лука, оригинальным соусом и кунжутом
+                      .wrong Это же фирменный вьетнамский салат со свежим шпинатом, огурцами, хрустящей крошкой из лука. В него невозможно не влюбиться, но всё равно ответ не верный.
+                    .next
+                      a(href="#") Далее
+            .bottom
+            .action
+              a.variant(class="step-question-variant" data-status-answer="true" data-step-variant="step-8-l" href="#")
+              a.variant(class="step-question-variant" data-status-answer="false" data-step-variant="step-8-r" href="#")
+          //               //
+          //  QUESTION #9  //
+          //               //
+          .step-test
+            .backgrounds
+              .left(data-parallaxify-range-x="-50" style="background-color: #801FD1")
+              .right.swipe(data-parallaxify-range-x="-50" style="background-color: #FF8B00")
+            .images
+              .parallax
+                .left
+                  img(data-parallaxify-range-x="-20" data-parallaxify-range-y="30"  class="x1" src="images/step-9/figure.svg" alt="")
+                  img(data-parallaxify-range-x="-10" data-parallaxify-range-y="10"  class="x2" src="images/step-9/palochki.svg" alt="")
+                  img(data-parallaxify-range-x="20"  data-parallaxify-range-y="20"  class="x3" src="images/step-9/1.png" alt="")
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-50" class="x4" src="images/step-9/2.png" alt="")
+                .right
+                  img(data-parallaxify-range-x="40" data-parallaxify-range-y="40"   class="x5" src="images/step-9/4.png" alt="")
+                  img(data-parallaxify-range-x="20" data-parallaxify-range-y="-30"  class="x6" src="images/step-9/5.png" alt="")
+                  img(data-parallaxify-range-x="30" data-parallaxify-range-y="20"   class="x7" src="images/step-9/7.png" alt="")
+                  img(data-parallaxify-range-x="-20" data-parallaxify-range-y="30"  class="x8" src="images/step-9/cat.svg" alt="")
+                  img(data-parallaxify-range-x="-30" data-parallaxify-range-y="-30" class="x9" src="images/step-9/6.png" alt="")
+            .images.right-answer
+              .parallax
+                .answer-images
+                  img(data-parallaxify-range-x="-20" data-parallaxify-range-y="-25" class="x10"  src="images/step-9/5.png" alt="")
+                  img(data-parallaxify-range-x="-30" data-parallaxify-range-y="-50" class="x11"  src="images/step-9/4.png" alt="")
+                  img(data-parallaxify-range-x="-40" data-parallaxify-range-y="40"  class="x12"  src="images/step-9/6.png" alt="")
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-30" class="x13"  src="images/step-9/8.png" alt="")
+                  img(data-parallaxify-range-x="-60" data-parallaxify-range-y="-20" class="x14"  src="images/step-9/4.png" alt="")
+                  img(data-parallaxify-range-x="-20" data-parallaxify-range-y="10"  class="x15"  src="images/step-9/4.png" alt="")
+                  img(data-parallaxify-range-x="-10" data-parallaxify-range-y="10"  class="x16"  src="images/step-9/angry.svg" alt="")
+
+            .question
+              .centered
+                .title
+                  .ask Манэки-нэко
+                  .answer Денежный кот
+                .choose-variants
+                  .variant
+                    span(id="step-9-l").tsh-17 Китайское <br>блюдо
+                  .variant
+                    span(id="step-9-r").tsh-18 Денежный <br>кот
+                  .or
+                .correct-variant
+                  .frame
+                    .status
+                      .correct
+                        .icon
+                        .title Ура! Богатым будешь!
+                      .wrong
+                        .icon
+                        .title Никогда!
+                    .description
+                      .correct Это правильный ответ! МАНЭКИ-НЭКО – это любимая японцами статуэтка машущего лапкой кота. Она, по мнению японцев, приносит удачу и успех в финансовых делах.
+                      .wrong Слышите, никогда не ешьте котиков! Это никакое не блюдо, а статуэтка кота, приносящего, как верят японцы, удачу.
+                    .next
+                      a(href="#") Далее
+            .bottom
+            .action
+              a.variant(class="step-question-variant" data-status-answer="false" data-step-variant="step-9-l" href="#")
+              a.variant(class="step-question-variant" data-status-answer="true" data-step-variant="step-9-r" href="#")
+          //               //
+          //  QUESTION #10  //
+          //               //
+          .step-test
+            .backgrounds
+              .left(data-parallaxify-range-x="-50" style="background-color: #D2CC00")
+              .right.swipe(data-parallaxify-range-x="-50" style="background-color: #FF3670")
+            .images
+              .parallax
+                .left
+                  img(data-parallaxify-range-x="-20" data-parallaxify-range-y="30"  class="b1" src="images/step-10/1.png" alt="")
+                  img(data-parallaxify-range-x="-10" data-parallaxify-range-y="10"  class="b2" src="images/step-10/2.png" alt="")
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-50" class="b3" src="images/step-10/eda.svg" alt="")
+                .right
+                  img(data-parallaxify-range-x="40" data-parallaxify-range-y="40"  class="b4" src="images/step-10/3.png" alt="")
+                  img(data-parallaxify-range-x="20" data-parallaxify-range-y="-30" class="b5" src="images/step-10/star-left.svg" alt="")
+                  img(data-parallaxify-range-x="40" data-parallaxify-range-y="40"  class="b6" src="images/step-10/star-right.svg" alt="")
+                  img(data-parallaxify-range-x="40" data-parallaxify-range-y="40"  class="b7" src="images/step-10/youtube.svg" alt="")
+                  img(data-parallaxify-range-x="20" data-parallaxify-range-y="-30" class="b8" src="images/step-10/4.png" alt="")
+            .images.right-answer
+              .parallax
+                .answer-images
+                  img(data-parallaxify-range-x="-20" data-parallaxify-range-y="-25" class="b9"  src="images/step-10/star-left.svg" alt="")
+                  img(data-parallaxify-range-x="-30" data-parallaxify-range-y="-50" class="b10" src="images/step-10/star-right.svg" alt="")
+                  img(data-parallaxify-range-x="-40" data-parallaxify-range-y="40"  class="b11" src="images/step-10/youtube.svg" alt="")
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-30" class="b12" src="images/step-10/3.png" alt="")
+                  img(data-parallaxify-range-x="-10" data-parallaxify-range-y="10"  class="b13" src="images/step-10/5.png" alt="")
+
+            .question
+              .centered
+                .title
+                  .ask Пак чэ сан
+                  .answer звезда ютуба
+                .choose-variants
+                  .variant
+                    span(id="step-10-l").tsh-19 Корейское <br>блюдо
+                  .variant
+                    span(id="step-10-r").tsh-20 Звезда <br>ютуба
+                  .or
+                .correct-variant
+                  .frame
+                    .status
+                      .correct
+                        .icon
+                        .title Опа! Гангнам стайл!
+                      .wrong
+                        .icon
+                        .title Печаль(((
+                    .description
+                      .correct Всё верно! Просто мы все знаем его как исполнителя с псевдонимом Psy! Отгадал! А может ты и есть Psy?
+                      .wrong О вкусах не спорят, но кушать корейского репера Пак Чэ Сана – это перебор! Тебе наверняка знаком его псевдоним Psy и нашумевшая композиция Gangnam Style.
+                    .next
+                      a(class="done-result" href="#") Далее
+            .bottom
+            .action
+              a.variant(class="step-question-variant" data-status-answer="false" data-step-variant="step-10-l" href="#")
+              a.variant(class="step-question-variant" data-status-answer="true" data-step-variant="step-10-r" href="#")
+      section.m_result
+        .result
+          .centered
+            .answers <i id="total-correct-answers">0</i>/10
+            .levels
+              .level-0
+                .images
+                  .parallax
+                    img(data-parallaxify-range-x="50" data-parallaxify-range-y="30" class="l0-1" src="images/result-1/1.svg" alt="")
+                    img(data-parallaxify-range-x="-20" data-parallaxify-range-y="-25" class="l0-2" src="images/result-1/2.png" alt="")
+                    img(data-parallaxify-range-x="50" data-parallaxify-range-y="-50" class="l0-3" src="images/result-1/3.png" alt="")
+                    img(data-parallaxify-range-x="-40" data-parallaxify-range-y="20" class="l0-4" src="images/result-1/4.png" alt="")
+                    img(data-parallaxify-range-x="-70" data-parallaxify-range-y="80" class="l0-5" src="images/result-1/5.png" alt="")
+                .title мы спрашивали <br>у мисо-супа — <br>он угадал больше!
+                .desc М-да-а-а, ты не очень-то разбираешься в паназиатской кухне. Уже случалось заказывать оригами в японских ресторанах? Ничего страшного, твоё незнание - это прекрасно! У тебя впереди столько гастрономических открытий! Приходи в Шикари и познакомься с паназиатской кухней поближе!
+                .get-gift
+                  .frame
+                    p И капелька традиционного гостеприимства – жми на кнопку!
+                    .action
+                      a(href="#") Твое блюдо в подарок
+              .level-1
+                .images
+                  .parallax
+                    img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-20" class="l1-1" src="images/result-2/1.svg" alt="")
+                    img(data-parallaxify-range-x="20" data-parallaxify-range-y="20" class="l1-2" src="images/result-2/2.png" alt="")
+                    img(data-parallaxify-range-x="-20" data-parallaxify-range-y="-20" class="l1-3" src="images/result-2/3.png" alt="")
+                    img(data-parallaxify-range-x="50" data-parallaxify-range-y="-150" class="l1-4" src="images/result-2/3_1.png" alt="")
+                    img(data-parallaxify-range-x="80" data-parallaxify-range-y="50" class="l1-5" src="images/result-2/4.png" alt="")
+                    img(data-parallaxify-range-x="-50" data-parallaxify-range-y="50" class="l1-6" src="images/result-2/5.png" alt="")
+                    img(data-parallaxify-range-x="10" data-parallaxify-range-y="30" class="l1-7" src="images/result-2/6.svg" alt="")
+                .title ХОРОШИЙ УРОВЕНЬ, <br>НО ТВОЕ КУНГ-ФУ ЕЩЕ <br>ДАЛЕКО ОТ СОВЕРШЕНСТВА
+                .desc Неплохо для европейца, но хвастаться рановато. Ты кое-что знаешь, где-то что-то пробовал, но паназиатская кухня для тебя пока что неизведанная территория. Тем лучше – в Шикари у тебя получится заполнить пробелы в своём гастрономическом путешествии по странам Азии.
+                .get-gift
+                  .frame
+                    p И немного азиатской щедрости – жми на кнопку!
+                    .action
+                      a(href="#") Твое блюдо в подарок
+              .level-2
+                .images
+                  .parallax
+                    img(data-parallaxify-range-x="50" data-parallaxify-range-y="50" class="l2-1" src="images/result-3/1.png" alt="")
+                    img(data-parallaxify-range-x="-20" data-parallaxify-range-y="20" class="l2-2" src="images/result-3/2.png" alt="")
+                    img(data-parallaxify-range-x="-10" data-parallaxify-range-y="-10" class="l2-3" src="images/result-3/3.svg" alt="")
+                    img(data-parallaxify-range-x="50" data-parallaxify-range-y="50" class="l2-4" src="images/result-3/4.png" alt="")
+                    img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-50" class="l2-5" src="images/result-3/5.svg" alt="")
+                .title КРУТО! МЫ БУДЕм <br>НАЗЫВАТь ТЕБЯ СЕНСЕЙ <br>ИЛИ ВЕЛИКИЙ ЛОК ЛАК!
+                .desc Приятно иметь дело с настоящим мастером. Ты лучше всех между Волгой и Енисеем разбираешься в еде, которую готовят в разных уголках от Хуанхэ до Ганга. Заходи в Шикари, чтобы освежить вкус знакомых паназиатских блюд.
+                .get-gift
+                  .frame
+                    p И традиционный подарок мастеру – жми на кнопку!
+                    .action
+                      a(href="#") Твое блюдо в подарок
+              .level-3
+                .images
+                  .parallax
+                    img(data-parallaxify-range-x="70" data-parallaxify-range-y="50" class="l3-1" src="images/result-4/1.png" alt="")
+                    img(data-parallaxify-range-x="30" data-parallaxify-range-y="30" class="l3-2" src="images/result-4/2.png" alt="")
+                    img(data-parallaxify-range-x="50" data-parallaxify-range-y="-20" class="l3-3" src="images/result-4/3.png" alt="")
+                    img(data-parallaxify-range-x="-30" data-parallaxify-range-y="-30" class="l3-4" src="images/result-4/4.png" alt="")
+                    img(data-parallaxify-range-x="-20" data-parallaxify-range-y="20" class="l3-5" src="images/result-4/5.svg" alt="")
+                .title: img(src="images/level-3.svg" alt="")
+                .desc Кто вы, великий сенсей? Сколько лет вы путешествовали по Азии? Мы готовы провести ваш мастер класс у себя в ресторанах! А пока мы будем его организовывать, приходите попробовать как мы готовим паназиатскую кухню – нам будет лестно услышать мнение человека, раскусившего Азию!
+                .get-gift
+                  .frame
+                    p В знак признательности прими наш скромный дар:
+                    .action
+                      a(href="#") Твое блюдо в подарок
+            .bottom
+              <script src="http://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+              <script src="http://yastatic.net/share2/share.js"></script>
+              .share
+                .label Поделиться
+                <div class="soc-buttons ya-share2" data-services="facebook,vkontakte,odnoklassniki"></div>
+              .retry
+                a(href="#")
+                  span Повторить
+                  .icon
+                    img(src="images/result-retry.svg" alt="")
+                    img(src="images/result-retry-h.svg" alt="")
+      section.m_gift
+        .wrapper
+          .centered
+            .gift-steps
+              .gift-step.choose-dish
+                .title Выбери свое блюдо в подарок:
+                .list
+                  .item(data-gift-final-title="<span>Мой</span> суп фо с говядиной")
+                    .frame
+                      .image: img(src="images/dish-1.png" alt="")
+                      .title: span Суп фо <br>с говядиной
+                  .item(data-gift-final-title="<span>Моя</span> лапша пад тай")
+                    .frame
+                      .image: img(src="images/dish-2.png" alt="")
+                      .title: span Лапша <br>пад тай
+                  .item(data-gift-final-title="<span>Мои</span> овощи массаман карри")
+                    .frame
+                      .image: img(src="images/dish-3.png" alt="")
+                      .title: span Овощи <br>массаман <br>карри
+              .gift-step.submit-dish
+                .desc
+                  div Ммм, суп Фо – то, что вьетнамский доктор прописал! Осталось получить QR-код. Скорее жми кнопку
+                  div Ммм, лапша Пад Тай – палочки оближешь! Осталось получить QR-код. Скорее жми кнопку
+                  div Ммм, овощи Массаман Карри – просто тайское удовольствие! Осталось получить QR-код. Скорее жми кнопку
+                .action
+                  input(type="hidden" name="choosen-dish" value="")
+                  a(href="#") ОК
+              .gift-step.final-dish
+                .form
+                  .form-col
+                    .title <span>Мое блюдо</span>&nbsp;в подарок
+                  .form-col
+                    .qr qr
+                  .form-col
+                    form
+                      .label Сделай скриншот или отправь на электронную почту:
+                      input(type="email" placeholder="Ваш e-mail")
+                      button(type="submit") Отправить
+                .instruction Покажи QR-код в любом ресторане «Шикари», сделай заказ на сумму от 500 рублей и получи выбранное блюдо в подарок!*
+                .retry
+                  a(href="#")
+                    span Пройти тест еще раз
+                    .icon
+                      img(src="images/result-retry.svg" alt="")
+                      img(src="images/result-retry-h.svg" alt="")
+                .remark
+                  p *Акция действует в период с 09.10.2017 г. до 30.11.2017 г.
+                  p QR-код позволяет получить только одно блюдо в подарок на любой чек от 500 рублей.
+    // Javascript
+    script(src="js/jquery.min.js")
+    script(src="js/vendor.js")
+    script(src="js/app.js")

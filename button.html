@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body{
+      background: #222;
+    }
+    .test-button{
+      color: #f80cc7;
+      font-size: 24px;
+      line-height: 1;
+      -webkit-transition: all .5s;
+      transition: all .5s;
+      border: 3px solid #fff;
+      -webkit-box-shadow: 0 0 10px 2px hsla(0,0%,100%,.75), inset 0 0 10px 2px hsla(0,0%,100%,.75);
+      box-shadow: 0 0 10px 2px hsla(0,0%,100%,.75), inset 0 0 10px 2px hsla(0,0%,100%,.75);
+      padding: 8px 15px;
+      border-radius: 2px;
+      display: inline-block;
+      vertical-align: middle;
+      text-decoration: none;
+    }
+    .test-button span{
+      color: #b2f500;
+      -webkit-transition: all .5s;
+      transition: all .5s;
+    }
+    @keyframes b{
+      0%{
+        -webkit-box-shadow:0 0 10px 2px #f80cc7,inset 0 0 10px 2px #f80cc7;
+        box-shadow:0 0 10px 2px #f80cc7,inset 0 0 10px 2px #f80cc7
+      }
+      to
+      {
+        -webkit-box-shadow:0 0 15px 3px #f80cc7,inset 0 0 15px 3px #f80cc7;
+        box-shadow:0 0 15px 3px #f80cc7,inset 0 0 15px 3px #f80cc7
+      }
+    }
+    .test-button:hover{
+      border-color: #f80cc7;
+      -webkit-box-shadow: 0 0 10px 2px #f80cc7, inset 0 0 10px 2px #f80cc7;
+      box-shadow: 0 0 10px 2px #f80cc7, inset 0 0 10px 2px #f80cc7;
+      color: #f80cc7;
+      -webkit-animation: b 1s ease-in-out infinite alternate .3s;
+      animation: b 1s ease-in-out infinite alternate .3s;
+    }
+    .test-button:hover span{
+      color: #f80cc7;
+    }
+
+  </style>
+</head>
+<body>
+  <a class="test-button" href="#">Раскуси <span>Азию</span></a>
+</body>
+</html>
