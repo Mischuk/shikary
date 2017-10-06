@@ -295,8 +295,8 @@
                         <div class="parallax">
                             <div class="left">
                                 <div class="answer-images">
-                                    <img class="w1" src="images/step-3/1.png" alt data-parallaxify-range-x="-50" data-parallaxify-range-y="10">
                                     <img class="w2" src="images/step-3/2.png" alt data-parallaxify-range-x="20" data-parallaxify-range-y="-30">
+                                    <img class="w1" src="images/step-3/1.png" alt data-parallaxify-range-x="-50" data-parallaxify-range-y="10">
                                 </div>
                             </div>
                             <div class="right">
@@ -458,11 +458,11 @@
                             </div>
                             <div class="right">
                                 <img class="r6" src="images/step-5/6.png" alt data-parallaxify-range-x="-20" data-parallaxify-range-y="-20">
-                                <img class="r7" src="images/step-5/7.png" alt data-parallaxify-range-x="-30" data-parallaxify-range-y="-30">
                                 <img class="r8" src="images/step-5/8.svg" alt data-parallaxify-range-x="-40" data-parallaxify-range-y="-40">
                                 <img class="r9" src="images/step-5/9.svg" alt data-parallaxify-range-x="25" data-parallaxify-range-y="50">
                                 <img class="r10" src="images/step-5/10.svg" alt data-parallaxify-range-x="35" data-parallaxify-range-y="50">
                                 <img class="r11" src="images/step-5/11.png" alt data-parallaxify-range-x="-55" data-parallaxify-range-y="55">
+                                <img class="r7" src="images/step-5/7.png" alt data-parallaxify-range-x="-30" data-parallaxify-range-y="-30">
                                 <div class="answer-images">
                                     <img class="r12 for-result" src="images/step-5/12.svg" alt data-parallaxify-range-x="20" data-parallaxify-range-y="20">
                                     <img class="r13 for-result" src="images/step-5/13.png" alt data-parallaxify-range-x="30" data-parallaxify-range-y="30">
@@ -617,8 +617,8 @@
                                 <img class="u4" src="images/step-7/lojka.svg" alt data-parallaxify-range-x="20" data-parallaxify-range-y="-10">
                             </div>
                             <div class="right">
-                                <img class="u5" src="images/step-7/1.png" alt data-parallaxify-range-x="50" data-parallaxify-range-y="50">
                                 <img class="u6" src="images/step-7/map.svg" alt data-parallaxify-range-x="-50" data-parallaxify-range-y="-50">
+                                <img class="u5" src="images/step-7/1.png" alt data-parallaxify-range-x="50" data-parallaxify-range-y="50">
                             </div>
                         </div>
                     </div>
@@ -700,7 +700,7 @@
                             <div class="right">
                                 <img class="z7" src="images/step-8/letter.svg" alt data-parallaxify-range-x="-50" data-parallaxify-range-y="-70">
                                 <img class="z4" src="images/step-8/3.png" alt data-parallaxify-range-x="50" data-parallaxify-range-y="80">
-                                <img class="z5" src="images/step-8/5.png" alt data-parallaxify-range-x="50" data-parallaxify-range-y="20">
+                                <img class="z5" src="images/step-8/5.png" alt data-parallaxify-range-x="-50" data-parallaxify-range-y="20">
                                 <img class="z6" src="images/step-8/4.png" alt data-parallaxify-range-x="-50" data-parallaxify-range-y="-70">
                                 <img class="z8" src="images/step-8/heart.svg" alt data-parallaxify-range-x="-50" data-parallaxify-range-y="-70">
                                 <div class="answer-images">
@@ -1113,10 +1113,11 @@
                                     <div class="qr">qr</div>
                                 </div>
                                 <div class="form-col">
-                                    <form>
+                                    <form id="send-qr">
                                         <div class="label">Сделай скриншот или отправь на электронную почту:</div>
-                                        <input type="email" placeholder="Ваш e-mail">
+                                        <input type="email" placeholder="Ваш e-mail" required>
                                         <button type="submit">Отправить</button>
+                                        <a class="popup-promo" id="popup-send-qr-call" href="#popup-send-qr" style="display: none;"></a>
                                     </form>
                                 </div>
                             </div>
@@ -1140,6 +1141,9 @@
             </div>
         </section>
     </main>
+    <div class="zoom-anim-dialog mfp-hide" id="popup-send-qr">
+        <div>Аригато! Твой QR-код выслан. Бегом проверять почту! И увидимся в Шикари!</div>
+    </div>
     <!-- Javascript-->
     <script src="js/jquery.min.js"></script>
     <script src="js/vendor.js"></script>

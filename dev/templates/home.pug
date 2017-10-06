@@ -11,11 +11,6 @@ html(lang="ru").no-js
     link(href="https://fonts.googleapis.com/css?family=Comfortaa|Noto+Sans:700&amp;subset=cyrillic" rel="stylesheet")
     script(async src="js/modernizr.js")
   body
-    //- Tasks
-
-        1. В тесте при показе результата ответ может не помещаться в экран.
-           Делать проверку: if контент больше экрана then ставится авто высота для шага,
-                            при клике далее убирать авто высоту.
     include _content
     include _mixins
     header(class="m_header")
@@ -197,8 +192,8 @@ html(lang="ru").no-js
               .parallax
                 .left
                   .answer-images
-                    img(data-parallaxify-range-x="-50" data-parallaxify-range-y="10" class="w1" src="images/step-3/1.png" alt="")
                     img(data-parallaxify-range-x="20" data-parallaxify-range-y="-30" class="w2" src="images/step-3/2.png" alt="")
+                    img(data-parallaxify-range-x="-50" data-parallaxify-range-y="10" class="w1" src="images/step-3/1.png" alt="")
                 .right
                   img(data-parallaxify-range-x="-40" data-parallaxify-range-y="20" class="w3" src="images/step-3/3.png" alt="")
                   img(data-parallaxify-range-x="10" data-parallaxify-range-y="30" class="w4" src="images/step-3/4.png" alt="")
@@ -313,11 +308,11 @@ html(lang="ru").no-js
                     //- img(data-parallaxify-range-x="50" data-parallaxify-range-y="50" class="r5" src="images/step-5/5.svg" alt="")
                 .right
                   img(data-parallaxify-range-x="-20" data-parallaxify-range-y="-20" class="r6" src="images/step-5/6.png" alt="")
-                  img(data-parallaxify-range-x="-30" data-parallaxify-range-y="-30" class="r7" src="images/step-5/7.png" alt="")
                   img(data-parallaxify-range-x="-40" data-parallaxify-range-y="-40" class="r8" src="images/step-5/8.svg" alt="")
                   img(data-parallaxify-range-x="25" data-parallaxify-range-y="50" class="r9" src="images/step-5/9.svg" alt="")
                   img(data-parallaxify-range-x="35" data-parallaxify-range-y="50" class="r10" src="images/step-5/10.svg" alt="")
                   img(data-parallaxify-range-x="-55" data-parallaxify-range-y="55" class="r11" src="images/step-5/11.png" alt="")
+                  img(data-parallaxify-range-x="-30" data-parallaxify-range-y="-30" class="r7" src="images/step-5/7.png" alt="")
                   .answer-images
                     img(data-parallaxify-range-x="20" data-parallaxify-range-y="20" class="r12 for-result" src="images/step-5/12.svg" alt="")
                     img(data-parallaxify-range-x="30" data-parallaxify-range-y="30" class="r13 for-result" src="images/step-5/13.png" alt="")
@@ -426,8 +421,8 @@ html(lang="ru").no-js
                   img(data-parallaxify-range-x="30" data-parallaxify-range-y="40" class="u3" src="images/step-7/4.png" alt="")
                   img(data-parallaxify-range-x="20" data-parallaxify-range-y="-10" class="u4" src="images/step-7/lojka.svg" alt="")
                 .right
-                  img(data-parallaxify-range-x="50" data-parallaxify-range-y="50" class="u5" src="images/step-7/1.png" alt="")
                   img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-50" class="u6" src="images/step-7/map.svg" alt="")
+                  img(data-parallaxify-range-x="50" data-parallaxify-range-y="50" class="u5" src="images/step-7/1.png" alt="")
             .images.right-answer
               .parallax
                 .answer-images
@@ -484,7 +479,7 @@ html(lang="ru").no-js
                 .right
                   img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-70" class="z7" src="images/step-8/letter.svg" alt="")
                   img(data-parallaxify-range-x="50" data-parallaxify-range-y="80" class="z4" src="images/step-8/3.png" alt="")
-                  img(data-parallaxify-range-x="50" data-parallaxify-range-y="20" class="z5" src="images/step-8/5.png" alt="")
+                  img(data-parallaxify-range-x="-50" data-parallaxify-range-y="20" class="z5" src="images/step-8/5.png" alt="")
                   img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-70" class="z6" src="images/step-8/4.png" alt="")
                   img(data-parallaxify-range-x="-50" data-parallaxify-range-y="-70" class="z8" src="images/step-8/heart.svg" alt="")
                   .answer-images
@@ -750,10 +745,11 @@ html(lang="ru").no-js
                   .form-col
                     .qr qr
                   .form-col
-                    form
+                    form#send-qr
                       .label Сделай скриншот или отправь на электронную почту:
-                      input(type="email" placeholder="Ваш e-mail")
+                      input(type="email" placeholder="Ваш e-mail" required)
                       button(type="submit") Отправить
+                      a(href="#popup-send-qr" id="popup-send-qr-call" style="display: none" class="popup-promo")
                 .instruction Покажи QR-код в любом ресторане «Шикари», сделай заказ на сумму от 500 рублей и получи выбранное блюдо в подарок!*
                 .retry
                   a(href="#")
@@ -764,6 +760,8 @@ html(lang="ru").no-js
                 .remark
                   p *Акция действует в период с 09.10.2017 г. до 30.11.2017 г.
                   p QR-код позволяет получить только одно блюдо в подарок на любой чек от 500 рублей.
+    div(id="popup-send-qr" class="zoom-anim-dialog mfp-hide")
+      div Аригато! Твой QR-код выслан. Бегом проверять почту! И увидимся в Шикари!
     // Javascript
     script(src="js/jquery.min.js")
     script(src="js/vendor.js")
