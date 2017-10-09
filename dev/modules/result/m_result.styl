@@ -339,23 +339,53 @@ body.result
           .action
             margin-top 15px
             a
-              color $green
-              border 2px solid $green
-              border-radius $radius
-              font-size 20px
+              font-size 0
               line-height 1
               display inline-block
               vertical-align middle
-              padding 5px 10px
+              width 201.3px
+              height 38px
+              position relative
               anim()
-              @media SM
-                font-size 24px
-              @media MD
-                font-size 30px
-                padding 10px 15px
+              &:before
+                content ''
+                width 100%
+                height 100%
+                background url("../images/buttons/button-get-normal.png") no-repeat 0 0
+                background-size contain
+                position absolute
+                left 0
+                top 0
+                opacity 1
+                anim()
+              &:after
+                anim()
+                opacity 0
+                content ''
+                position absolute
+                left 50%
+                top 50%
+                width 212px
+                height 48.6px
+                margin-left -106px
+                margin-top -24.3px
+                background url("../images/buttons/button-get-hover.png") no-repeat 0 0
+                background-size contain
               &:hover
-                background $green
-                color $black
+                &:before
+                  opacity 0
+                &:after
+                  opacity 1
+              @media SM
+                width 302px
+                height 57px
+                &:after
+                  width 318px
+                  height 73px
+                  margin-left -159px
+                  margin-top -36.5px
+              //@media MD
+
     .bottom
       position relative
       z-index 1

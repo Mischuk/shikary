@@ -110,9 +110,11 @@
       sn()
       .action
         a
-          background $green
-          color $black
           cursor default
+          &:after
+            opacity 0 !important
+          &:before
+            opacity 1 !important
     &.is-active
       display block
     .desc
@@ -133,19 +135,39 @@
       a
         display inline-block
         vertical-align middle
-        color $green
-        font-size 16px
+        font-size 0
         line-height 1
-        border 2px solid $green
-        padding 5px 10px
-        border-radius $radius
-        @media SM
-          font-size 24px
-        @media MD
-          font-size 30px
+        width 69px
+        height 58px
+        position relative
+        &:before
+          content ''
+          width 100%
+          height 100%
+          position absolute
+          left 0
+          top 0
+          background url("../images/buttons/button-ok-normal.png") no-repeat 0 0
+          anim()
+          opacity 1
+        &:after
+          content ''
+          position absolute
+          left 50%
+          top 50%
+          background url("../images/buttons/button-ok-hover.png") no-repeat 0 0
+          background-size contain
+          width 85px
+          height 74px
+          margin-top -(@height/2)
+          margin-left -(@width/2)
+          opacity 0
+          anim()
         &:hover
-          background $green
-          color $black
+          &:before
+            opacity 0
+          &:after
+            opacity 1
   .final-dish
     padding-top 20px
     display none
@@ -230,18 +252,43 @@
           &:focus
             border-color #fff
         button
-          pribambas()
-          border 2px solid #fff
-          border-radius $radius
+          font-size 0
+          position relative
+          display inline-block
+          vertical-align middle
+          width 131px
+          height 46px
           background none
-          color #fff
-          @media SM
-            font-size 21px
-            height auto
-            padding 5px 10px
+          border none
+          &:before
+            anim()
+            opacity 1
+            content ''
+            position absolute
+            left 0
+            top 0
+            width 100%
+            height 100%
+            background url("../images/buttons/button-send-normal.png") no-repeat 0 0
+            background-size contain
+          &:after
+            anim()
+            opacity 0
+            content ''
+            position absolute
+            left 50%
+            top 50%
+            width 139px
+            height 54px
+            margin-left -(@width/2)
+            margin-top -(@height/2)
+            background url("../images/buttons/button-send-hover.png") no-repeat 0 0
+            background-size contain
           &:hover
-            background #fff
-            color $black
+            &:before
+              opacity 0
+            &:after
+              opacity 1
     .instruction
       color #fff
       font-size 14px
